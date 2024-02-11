@@ -1,0 +1,8 @@
+/* CSS definition file containing sitestyle stylesheets */
+BODY { background-color: rgb(255,255,255);}
+ A:active { color: rgb(0,0,153);}
+ A:link { color: rgb(0,0,153);}
+ A:hover { color: rgb(0,0,0);}
+ A:visited { color: rgb(0,153,255);}
+ .TextNavBar { text-decoration: none ;}
+ 

@@ -1,0 +1,562 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- © 2010 Los Altos Academy of Engineering. All rights reserved. All code below was created by the LAAE 
+	 Information Technology team, with the assistance from LAAE/LASV alumni (Jeffrey Hsiung and Justin K. Wong).
+	 Exceptions exist to certain parts, that of which are clearly designated. -->
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link href="../../favicon.gif" rel="icon" type="image/gif" />
+<title>MUC: 2012-2013 [LASV.ORG]</title>
+<!-- Begin print preview / print script -->
+<style media="print" type="text/css">
+
+body {
+	background-color: #FFFFFF;
+	background-image: none;
+	color: #000000;
+}
+.print_removed {
+	display: none;
+}
+</style>
+<!-- End print preview / print script -->
+<link href="../../templates_v10/menu/chrometheme/chromestyle.css" rel="stylesheet" type="text/css" />
+<script src="../../templates_v10/menu/chromejs/chrome.js" type="text/javascript">
+
+/***********************************************
+* Chrome CSS Drop Down Menu- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+<script src="../../templates_v10/accordion/ddaccordion.js" type="text/javascript">
+/***********************************************
+* Accordion Content script- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* Visit http://www.dynamicDrive.com for hundreds of DHTML scripts
+* This notice must stay intact for legal use
+***********************************************/
+
+</script>
+<script type="text/javascript">
+
+ddaccordion.init({ //top level headers initialization
+	headerclass: "expandable", //Shared CSS class name of headers group that are expandable
+	contentclass: "categoryitems", //Shared CSS class name of contents group
+	collapseprev: false, //Collapse previous content (so only one open at any time)? true/false 
+	defaultexpanded: [0], //index of content(s) open by default [index1, index2, etc]. [] denotes no content
+	onemustopen: true, //Specify whether at least one header should be open always (so never all headers closed)
+	animatedefault: true, //Should contents open by default be animated into view?
+	persiststate: true, //persist state of opened contents within browser session?
+	toggleclass: ["", "openheader"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	togglehtml: ["prefix", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "normal", //speed of animation: "fast", "normal", or "slow"
+	oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+		//do nothing
+	},
+	onopenclose:function(header, index, state, isclicked){ //custom code to run whenever a header is opened or closed
+		//do nothing
+	}
+})
+
+ddaccordion.init({ //2nd level headers initialization
+	headerclass: "subexpandable", //Shared CSS class name of sub headers group that are expandable
+	contentclass: "subcategoryitems", //Shared CSS class name of sub contents group
+	collapseprev: true, //Collapse previous content (so only one open at any time)? true/false 
+	defaultexpanded: [], //index of content(s) open by default [index1, index2, etc]. [] denotes no content
+	animatedefault: false, //Should contents open by default be animated into view?
+	persiststate: true, //persist state of opened contents within browser session?
+	toggleclass: ["opensubheader", "closedsubheader"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	togglehtml: ["none", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "normal", //speed of animation: "fast", "normal", or "slow"
+	oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+		//do nothing
+	},
+	onopenclose:function(header, index, state, isclicked){ //custom code to run whenever a header is opened or closed
+		//do nothing
+	}
+})
+
+
+</script>
+<style type="text/css">
+
+/* Begin accordion styles */
+.arrowlistmenu {
+	width: 100%; /*width of accordion menu*/
+}
+.arrowlistmenu .menuheader {
+	/*CSS class for menu headers in general (expanding or not!)*/
+font: bold 12px Trebuchet MS;
+	color: white;
+	background: black url('../../templates_v10/accordion/titlebar.jpg') repeat-x left 50%;
+	margin-bottom: 10px; /*bottom spacing between header and rest of content*/;
+	text-transform: uppercase;
+	padding: 4px 0 4px 10px;
+/*header text is indented 10px*/cursor: pointer;
+}
+.arrowlistmenu .openheader {
+	/*CSS class to apply to expandable header when it's expanded*/
+background-image: url('../../templates_v10/accordion/titlebar-active.jpg');
+}
+.arrowlistmenu ul {
+	/*CSS for UL of each sub menu*/
+list-style-type: none;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 8px; /*bottom spacing between each UL and rest of content*/
+}
+.arrowlistmenu ul li {
+	padding-bottom: 2px; /*bottom spacing between menu items*/
+}
+.arrowlistmenu ul li .opensubheader {
+	/*Open state CSS for sub menu header*/
+background: orange !important;
+}
+.arrowlistmenu ul li .closedsubheader {
+	/*Closed state CSS for sub menu header*/
+background: yellow !important;
+}
+.arrowlistmenu ul li a {
+	color: #A70303;
+	background: url('../../templates_v10/accordion/arrowbullet.png') no-repeat left 50%;
+/*custom bullet list image*/
+display: block;
+	padding-left: 19px; /*link text is indented 19px*/;
+	text-decoration: none;
+	font-weight: bold;
+	border-bottom: 1px solid #ADADAD;
+	font-size: 90%;
+	padding-right: 0;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.arrowlistmenu ul li a:visited {
+	color: #A70303;
+}
+.arrowlistmenu ul li a:hover {
+	/*hover state CSS*/
+background-color: #AAAAAA;
+}
+.arrowlistmenu ul li a.subexpandable:hover {
+	/*hover state CSS for sub menu header*/
+background: blue;
+}
+/* End accordion styles, begin page styles */
+.quoteFooter {
+	border-style: none none solid none;
+	border-width: 3px;
+	color: #333333;
+	background-color: #E0E0E0;
+	font-weight: normal;
+	border-collapse: collapse;
+	font-style: normal;
+}
+.border_collapse {
+	border-collapse: collapse;
+}
+.head {
+	background-color: #FFFFFF;
+	text-align: center;
+}
+.template_headerfooterbkg {
+	background-color: #CCCCCC;
+}
+.template_menushadow2 {
+	background-image: url('../../templates_v10/images/maindesign/menushadowside.jpg');
+}
+.template_whitebkg {
+	background-color: #FFFFFF;
+}
+.template_footerformat {
+	text-align: left;
+	font-size: 8pt;
+}
+.site-bkgbottomtransition {
+	background-image: url('../../templates_v10/images/maindesign/site-bkg_toptrans.jpg');
+	color: #FFFFFF;
+	background-repeat: repeat-x;
+}
+.align_center {
+	text-align: center;
+}
+.align_left {
+	text-align: left;
+}
+.align_right {
+	text-align: right;
+}
+.margins_zero {
+	padding: 0px;
+	margin: 0px;
+}
+.footer_vividnet {
+	border-width: 0px;
+	margin-top: -7px;
+	margin-bottom: -7px;
+	font-style: normal;
+}
+.set_border1px {
+	border: 1px solid #000000;
+	border-collapse: collapse;
+}
+.set_border3px {
+	border: 3px solid #000000;
+	border-collapse: collapse;
+}
+.set_border0px {
+	border-width: 0px;
+	border-collapse: collapse;
+}
+.template_sidetext {
+	font-size: 9pt;
+	color: #000000;
+}
+.template_searchtext {
+	font-family: "Trebuchet MS";
+	font-size: 14px;
+	color: #000000;
+}
+.template_headbkg {
+	background-image: url('../../templates_v10/images/mainheader/background.jpg');
+}
+.quoteMain {
+	border-style: none;
+	color: #333333;
+	background-color: #E0E0E0;
+	font-weight: bold;
+	border-collapse: collapse;
+	font-style: italic;
+}
+.site-bkgtopright {
+	background-image: url('../../templates_v10/images/maindesign/site-bkg_top_rightedge.jpg');
+	background-repeat: repeat-y;
+}
+.site-bkgtopleft {
+	background-image: url('../../templates_v10/images/maindesign/site-bkg_top_leftedge.jpg');
+	background-repeat: repeat-y;
+}
+.site-bkgleft {
+	background-image: url('../../templates_v10/images/maindesign/site-bkg_leftedge.jpg');
+	background-repeat: repeat-y;
+}
+.site-bkgright {
+	background-image: url('../../templates_v10/images/maindesign/site-bkg_rightedge.jpg');
+	background-repeat: repeat-y;
+}
+.site-bkgfooter {
+	background-image: url('../../templates_v10/images/footer/background-footer.jpg');
+	background-repeat: repeat-x;
+}
+.site-bkgend {
+	background-image: url('../../templates_v10/images/footer/background-endfade.jpg');
+	background-repeat: repeat-x;
+}
+.style1 {
+	border-width: 0px;
+}
+</style>
+<link href="../../templates_v10/default.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body style="margin: 0; background-color: #D7D7D7;">
+
+<table cellpadding="0" cellspacing="0" class="border_collapse" style="width: 100%; height: 100%">
+	<tr>
+		<td colspan="5">
+		<table cellpadding="0" cellspacing="0" style="width: 100%">
+			<tr class="head">
+				<td class="print_removed" style="background-color: #eeeeee">&nbsp;</td>
+				<td class="print_removed site-bkgtopleft" style="width: 25px">&nbsp;</td>
+				<td class="head" style="width: 930px;">
+				<table cellpadding="0" cellspacing="0" style="width: 100%">
+					<tr class="template_headbkg">
+						<td class="print_removed" style="width: 10px"></td>
+						<td class="align_left" style="width: 565px" valign="top">
+						<a href="../../index.htm">
+						<img alt="Los Altos Academy of Engineering" src="../../templates_v10/images/mainheader/laae_headtitle3.jpg" class="style1" /></a></td>
+						<td class="print_removed">
+						<table cellpadding="0" cellspacing="0" style="width: 100%; height: 100%">
+							<tr>
+								<td>
+								<form id="cse-search-box" action="../../search/results.htm" class="align_right margins_zero">
+									<input name="cx" type="hidden" value="013252607434088326132:qb79_e4akxe" />
+									<input name="cof" type="hidden" value="FORID:9" />
+									<input name="ie" type="hidden" value="UTF-8" />
+									<input class="template_searchtext" name="q" size="35" type="text" />
+								</form>
+								
+								<script src="../../templates_v10/search/brand.js" type="text/javascript"></script>
+								</td>
+							</tr>
+						</table>
+						</td>
+						<td class="print_removed" style="width: 10px"></td>
+					</tr>
+					<tr class="template_headbkg print_removed">
+						<td colspan="4">
+						<div id="chromemenu" class="chromestyle" style="width: 100%">
+							<ul class="mainmenu">
+								<li><a href="../../index.htm">Home</a></li>
+								<li>
+								<a href="../../about/index.htm" rel="dropmenu1">About 
+								Us</a></li>
+								<li>
+								<a href="../../press/index.htm" rel="dropmenu2">Press</a></li>
+								<li>
+								<a href="../../pastprojects/index.htm" rel="dropmenu3">
+								Past Projects</a></li>
+								<li>
+								<a href="../index.htm" rel="dropmenu4">
+								Current Projects</a></li>
+								<li>
+								<a href="laaefamily/index.htm" rel="dropmenu5">
+								Our Family</a></li>
+								<li>
+								<a href="../../galleries/index.htm" rel="dropmenu6">
+								Galleries</a></li>
+								<li><a href="../../sponsors/index.htm">Sponsors</a></li>
+								<li><a href="../../contact/index.htm">Contact Us</a></li>
+							</ul>
+						</div>
+						<!-- 1st drop down menu -->
+						<div id="dropmenu1" class="dropmenudiv">
+							<a href="../../about/overview/index.htm">Overview</a>
+							<a href="../../about/programs/index.htm">Programs We Sponsored</a> </div>
+						<!-- 2nd drop down menu -->
+						<div id="dropmenu2" class="dropmenudiv">
+							<a href="../../press/publications/index.htm">Publications</a>
+							<a href="../../press/calendar/index.htm">Events Calendar</a>
+						</div>
+						<!-- 3rd drop down menu -->
+						<div id="dropmenu3" class="dropmenudiv">
+							</div>
+						<!-- 4th drop down menu -->
+						<div id="dropmenu4" class="dropmenudiv">
+							<a href="../volt/index.htm">Volt</a>
+						<a href="../speedracer/index.htm">Speed Racer</a>
+						<a href="../frc/index.htm">FRC</a></div>
+						<!-- 5th drop down menu -->
+						<div id="dropmenu5" class="dropmenudiv">
+							<a href="../../laaefamily/acm/index.htm">Advisory Committee</a>
+							<!-- Under construction link
+							<a href="../laaefamily/booster/index.htm">Booster Club</a>
+							--><a href="../../laaefamily/alumni/index.htm">Alumni</a>
+							<a href="../../laaefamily/advisors/index.htm">Advisors</a>
+							<a href="../../laaefamily/students/index.htm">Students</a>
+						</div>
+						<!-- 6th drop down menu -->
+						<div id="dropmenu6" class="dropmenudiv">
+							<a href="../../laaefamily/acm/index.htm">Advisory Committee</a>
+							<a href="../../laaefamily/alumni/gallery.htm">Alumni</a>
+							<a href="../../pastprojects/bydv/gallery.htm">Build Your Dream 
+							Vehicle</a>
+							<a href="../../pastprojects/vehicles/photogallery/coolrunnings.htm">
+							Cool Runnings</a>
+							<a href="../../pastprojects/hpa/gallery.htm">Human Powered 
+							Airplane</a>
+							<a href="../../pastprojects/vehicles/dragster.htm">Dragster</a>
+							<a href="../../pastprojects/vehicles/photogallery/lightspeed.htm">
+							Light Speed 1/2/3</a>
+							<a href="../../pastprojects/vehicles/photogallery/solarshadow.htm">
+							Solar Shadow 1/2</a>
+							<a href="../../about/programs/isaaq/zev.htm#images">ZEV Challenge</a>
+							<a href="../../pastprojects/infusion/gallery.htm">Infusion 
+							Hydrogen Fuel Cell Vehicle</a>
+							<a href="../../pastprojects/jpl/2004/index.htm#images">JPL 
+							Invention Challenge</a>
+							<a href="../../pastprojects/botball/gallery.htm">Botball</a>
+							<a href="../../pastprojects/solarboat/index.htm">Solar Boat</a>
+							<a href="../../pastprojects/vehicles/photogallery/speedracer.htm">
+							Speed Racer</a>
+							<a href="../../pastprojects/bridge/index.htm">Bridge Competition</a>
+							<a href="../../pastprojects/hice/gallery.htm">HICE Hydrogen 
+							Internal Combustion Vehicle</a>
+							<a href="../../pastprojects/pulse/gallery.htm">Pulse</a>
+							<a href="../ftc/gallery.htm">First Tech Challenge</a>
+							<a href="gallery.htm">Mini Urban Challenge</a>
+							<a href="../../laaefamily/advisors/rfranz-retirement.htm">
+							Bob Franz&#39;s Retirement</a></div>
+						<script type="text/javascript">
+
+					cssdropdown.startchrome("chromemenu")
+
+				</script>
+						</td>
+					</tr>
+				</table>
+				</td>
+				<td class="print_removed site-bkgtopright" style="width: 25px">&nbsp;</td>
+				<td class="print_removed" style="background-color: #eeeeee">&nbsp;</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td class="site-bkgbottomtransition print_removed" valign="top">&nbsp;</td>
+		<td class="site-bkgleft print_removed" style="width: 25px; height: 100%;" valign="top">
+		<img alt="" height="350" src="../../templates_v10/images/maindesign/site-bkg_toptrans_leftedge.jpg" width="25" /></td>
+		<td align="left" style="width: 930px; background-color: #000000" valign="top">
+		<table cellpadding="0" cellspacing="0" style="width: 100%">
+			<tr>
+				<td class="template_whitebkg" style="width: 100%" valign="top">
+				<table cellpadding="0" cellspacing="0" style="width: 100%">
+					<tr>
+						<td><center>
+						<h1> 
+						<img alt="" src="../../templates_v10/images/contentheaders/projects-muc2012.jpg" width="700" height="75" /></h1>
+						</center></td>
+					</tr>
+				</table>
+				<table cellpadding="0" cellspacing="0" style="width: 100%; height: 100%">
+					<tr>
+						<td style="width: 20px; height: 20px"></td>
+						<td style="height: 20px"></td>
+						<td style="width: 20px; height: 20px"></td>
+					</tr>
+					<tr>
+						<td style="width: 20px; height: 15px;"></td>
+						<td><strong>Team 1:<br />
+						</strong>Seniors- <strong>Nicholas Pung<br />
+						</strong>Juniors-Marcos Avila, Kimberly Hsu, Kevin Morales, 
+						Jerry Wang<br />
+						Sophomores- Michael Chang<strong><br />
+						<br />
+						The team had to develop a powerpoint to present the 
+						robot to the judges. The following is the powerpoint 
+						they presented<br />
+						<br />
+						<a href="MUC2013.pptx">MUC 2012-2013 PowerPoint</a><br />
+						<br />
+						Team 2:<br />
+						</strong>Freshmen- Michael Attanasio, Carlos Delgado, 
+						Dominic Gonzalez,&nbsp; Eric Liu, Andrew Rojas </td>						
+						<td style="width: 20px; height: 15px;"></td>
+					</tr>
+					<tr>
+						<td style="width: 20px; height: 20px"></td>
+						<td style="height: 20px"></td>
+						<td style="width: 20px; height: 20px"></td>
+					</tr>
+				</table>
+				</td>
+				<td class="template_headerfooterbkg print_removed" style="width: 230px;" valign="top">
+				<table cellpadding="0" cellspacing="0" style="width: 230px">
+					<tr>
+						<td class="template_menushadow2" style="width: 10px; height: 20px;">
+						</td>
+						<td class="template_menushadow2" style="height: 20px">
+						</td>
+						<td class="template_menushadow2" style="width: 20px">
+						</td>
+					</tr>
+					<tr class="template_headerfooterbkg">
+						<td style="width: 10px"></td>
+						<td valign="top">
+						<div class="arrowlistmenu">
+							<h3 class="menuheader expandable">MIni urban 
+							challenge</h3>
+							<ul class="categoryitems">
+								<li><a href="index.htm">Home</a></li>
+								<li><a href="gallery.htm">Gallery</a></li>
+								<li><a href="2011-2012.htm">2011-2012</a></li>
+								<li><a href="2012-2013.htm">2012-2013</a></li>
+								<li><a href="2013-2014.htm">2013-2014</a></li>
+								<li><a href="2014-2015.htm">2014-2015</a></li>
+							</ul>
+							<h3 class="menuheader expandable">Our Family</h3>
+							<ul class="categoryitems">
+								<li><a href="../../files/laaefamily/acm/index.htm">Advisory 
+								Committee</a></li>
+								<li><a href="../../files/laaefamily/alumni/index.htm">Alumni</a></li>
+								<li>
+								<a href="../../files/laaefamily/advisors/index.htm">Advisors</a></li>
+								<li>
+								<a href="../../files/laaefamily/students/index.htm">Students</a></li>
+							</ul>
+							<h3 class="menuheader" style="cursor: default">PDF Reader 
+							Required</h3>
+							<div class="template_sidetext">
+								In order to read some of the publications listed 
+								on this page, a compatible PDF reader must be installed 
+								on your computer. If you don&#39;t have one, you can 
+								install Adobe Reader for free.<br />
+								<br />
+								<center>
+								<a href="http://www.adobe.com/go/EN_US-H-GET-READER">
+								<img alt="Get Adobe Reader®" class="set_border0px" height="39" src="get_adobe_reader.png" width="158" /></a></center>
+							</div>
+							<br />
+							<h3 class="menuheader" style="cursor: default">Contacting 
+							Us</h3>
+							<div class="template_sidetext">
+								If you have a suggestion, question, or comment about 
+								the program, feel free to
+								<a href="../../contact/index.htm">contact us</a>.</div>
+						</div>
+						</td>
+						<td style="width: 20px">&nbsp;</td>
+					</tr>
+					<tr class="template_headerfooterbkg">
+						<td style="width: 10px; height: 20px;">&nbsp;</td>
+						<td style="height: 20px">&nbsp;</td>
+						<td style="width: 20px; height: 20px;">&nbsp;</td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+				<table cellpadding="0" cellspacing="0" style="width: 100%">
+					<tr class="site-bkgfooter">
+						<td class="print_removed" style="width: 20px; height: 50px">&nbsp;</td>
+						<td style="height: 50px">
+						<span class="template_footerformat">© Los Altos Academy 
+						of Engineering. All rights reserved.<br />
+						This website is managed by the Information Technology team 
+						and hosted for LAAE by
+						<a href="http://www.vividnet.com/">
+						<img alt="" class="footer_vividnet print_removed" height="23" src="../../templates_v10/images/footer/vividnet_new.JPG" width="30" />VividNET</a>.</span></td>
+						<td class="print_removed" style="height: 50px; width: 90px;">&nbsp;</td>
+						<td class="print_removed" style="height: 50px; width: 90px;">
+						<center>
+						<!--
+						<p>
+						<a href="http://jigsaw.w3.org/css-validator/check/referer">
+						<img alt="Valid CSS!" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" style="border: 0; width: 88px; height: 31px" />
+						</a></p>--></center></td>
+						<td class="print_removed" style="width: 20px; height: 50px">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="site-bkgend" style="height: 20px" colspan="5">
+						&nbsp;</td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+		<td class="site-bkgright print_removed" style="width: 25px; height: 100%;" valign="top">
+		<img alt="" height="350" src="../../templates_v10/images/maindesign/site-bkg_toptrans_rightedge.jpg" width="25" /></td>
+		<td class="site-bkgbottomtransition print_removed" valign="top">&nbsp;</td>
+	</tr>
+</table>
+<!-- Begin: Google Analytics Tracking -->
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+	var pageTracker = _gat._getTracker("UA-1154984-1");
+	pageTracker._initData();
+	pageTracker._trackPageview();
+</script>
+<!-- End: Google Analytics Tracking -->
+
+</body>
+
+</html>
