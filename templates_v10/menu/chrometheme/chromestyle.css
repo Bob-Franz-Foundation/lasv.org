@@ -1,0 +1,103 @@
+.chromestyle{
+  width: 99%;
+  font-weight: bold;
+  }
+  
+  .chromestyle:after{ /*Add margin between menu and rest of content in Firefox*/
+  content: "."; 
+  display: block; 
+  height: 0; 
+  clear: both; 
+  visibility: hidden;
+  }
+  
+  .chromestyle ul{
+  border: 0px solid #BBB;
+  width: 100%;
+  background: url('/web/20190402104852im_/http://www.lasv.org/templates_v10/menu/chrometheme/blockdefault.jpg') repeat-x center; /*THEME CHANGE HERE*/
+  padding: 10px 0px;
+  margin: 0;
+  color: #FFFFFF;
+  font-family: Trebuchet MS, Helvetica, sans-serif;
+  font-weight: bold;
+  text-align: center; /*set value to "left", "center", or "right"*/
+  }
+  
+  .chromestyle ul li{
+  display: inline;
+  }
+  
+  .chromestyle ul li a{
+  color: #FFFFFF;
+  padding: 10px 13px 10px;
+  margin: 0;
+  text-decoration: none;
+  border-right: 0px solid #FFFFFF;
+  border-left: 0px solid #FFFFFF;
+  
+  }
+  
+  .chromestyle ul li a:hover, .chromestyle ul li a.selected{ /*script dynamically adds a class of "selected" to the current active menu item*/
+  background: url('/web/20190402104852im_/http://www.lasv.org/templates_v10/menu/chrometheme/blockactive.jpg') repeat-x center; /*THEME CHANGE HERE*/
+  font-family: Trebuchet MS, Heveletica, sans-serif;
+  color: #FFFFFF;
+  font-weight: bold;
+  }
+  
+  
+  /* ######### Style for Drop Down Menu ######### */
+  
+  .dropmenudiv{
+  position:absolute;
+  top: 0;
+  border: 0px solid #BBB; /*THEME CHANGE HERE*/
+  border-bottom-width: 0px;
+  font:normal 12px Trebuchet MS, Helvetica, sans-serif;
+  line-height:22px;
+  z-index:100;
+  background-color: #444444;
+  width: 260px;
+  visibility: hidden;
+  margin-top: -1px;
+  text-align: left;
+  /* filter: progid:DXImageTransform.Microsoft.Shadow(color=#CACACA,direction=135,strength=4); */ /*Add Shadow in IE. Remove if desired*/
+  }
+  
+  
+  .dropmenudiv a{
+  width: 100%;
+  display: block;
+  border-bottom: 0px solid #BBB; /*THEME CHANGE HERE*/
+  padding: 2px 0;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  text-indent: 5px;
+  /*margin-left: 5px;
+  margin-right: 5px;*/
+  }
+  
+  .dropmenudiv a:hover{ /*THEME CHANGE HERE*/
+  background-color: #6E6E6E;
+  text-decoration: none;
+  color: white;
+  }
+  /*
+       FILE ARCHIVED ON 10:48:52 Apr 02, 2019 AND RETRIEVED FROM THE
+       INTERNET ARCHIVE ON 21:50:43 Feb 11, 2024.
+       JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+  
+       ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+       SECTION 108(a)(3)).
+  */
+  /*
+  playback timings (ms):
+    exclusion.robots: 0.079
+    exclusion.robots.policy: 0.068
+    cdx.remote: 0.099
+    esindex: 0.01
+    LoadShardBlock: 162.636 (6)
+    PetaboxLoader3.datanode: 188.507 (8)
+    load_resource: 440.073 (2)
+    PetaboxLoader3.resolve: 302.151 (2)
+  */
