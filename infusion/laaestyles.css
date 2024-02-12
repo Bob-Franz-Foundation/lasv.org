@@ -1,0 +1,100 @@
+.title {
+	font-family: Impact;
+	font-size: 36px;
+	color: #000000;
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-position: center center;
+	font-weight: bolder;
+	font-style: normal;
+	font-variant: normal;
+	background-image: url(_images/_background/banner.jpg);
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+.text {
+	font-family: "Century Gothic";
+	font-size: 12px;
+	color: #000000;
+	text-indent: 0px;
+	border: 5px;
+	margin-right: 10px;
+	margin-bottom: 0px;
+	left: 5px;
+	right: 5px;
+	padding: 0px 5px;
+	margin-top: 0px;
+	margin-left: 10px;
+	background-attachment: scroll;
+	background-repeat: repeat;
+	background-position: center center;
+}
+.copyright {
+	font-size: 10px;
+	font-family: "Century Gothic";
+	color: #000000;
+	background-attachment: scroll;
+	background-image: url(_images/_background/back333.jpg);
+	background-repeat: repeat;
+	background-position: center;
+}
+.heads {
+	font-family: "Century Gothic";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: bold;
+	color: #000000;
+	text-align: center;
+	padding-top: 10px;
+}
+.subHeads {
+	font-family: "Century Gothic";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: underline;
+}
+.subHeads2 {
+	font-family: "Century Gothic";
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color: #000000;
+}
+.tableText {
+	font-family: "Century Gothic";
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	text-align: left;
+}
+.pic {
+	background-attachment: scroll;
+	background-image: none;
+	background-repeat: repeat;
+}
+.tableHead {
+	font-size: 14px;
+	font-weight: bold;
+}
+.head2 {
+	font-family: "Century Gothic";
+	font-size: 14px;
+	font-weight: bold;
+	color: #000000;
+}
+.background {
+	background-attachment: scroll;
+	background-image: url(_images/_background/back333.jpg);
+	background-repeat: repeat-y;
+	background-position: center;
+}

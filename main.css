@@ -1,0 +1,71 @@
+﻿a {
+	font-family: Verdana;
+	text-decoration: underline;
+	color: #444444;
+	margin: 0px;
+	font-variant: inherit;
+}
+textarea {
+	font-family: Verdana;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+	margin: 0px;
+}
+h1 {
+	font-family: Verdana;
+	font-size: 14pt;
+	font-weight: bold;
+	font-style: normal;
+	font-variant: normal;
+	text-transform: uppercase;
+	color: #000000;
+	margin: 0px;
+}
+h2 {
+	font-family: Verdana;
+	font-size: 14pt;
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	text-transform: uppercase;
+	color: #000000;
+}
+p {
+	font-family: Verdana;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+	margin: 0px;
+}
+h3 {
+	font-family: Verdana;
+	font-size: 8pt;
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	text-transform: none;
+	margin: 0px;
+	color: #000000;
+}
+a:hover {
+	font-family: Verdana;
+	text-decoration: underline;
+	color: #3F5798;
+	margin: 0px;
+	font-variant: inherit;
+}
+a:active {
+	font-family: Verdana;
+	text-decoration: underline;
+	color: #93A5D2;
+	margin: 0px;
+	font-variant: inherit;
+}
+

@@ -1,0 +1,604 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<!-- #BeginTemplate "../../../templates_v10/MainWithSide.dwt" -->
+
+<!-- © 2008 Los Altos Academy of Engineering. All rights reserved. All code below was created by the LAAE 
+	 Information Technology team, with the assistance from LAAE/LASV alumni (Jeffrey Hsiung and Justin K. Wong).
+	 Exceptions exist to certain parts, that of which are clearly designated. -->
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<!-- #BeginEditable "doctitle" -->
+<title>Light Speed [LASV.ORG]</title>
+<!-- #EndEditable -->
+<!-- Begin print preview / print script -->
+<style media="print" type="text/css">
+body {
+	background-color: #FFFFFF;
+	background-image: none;
+	color: #000000;
+}
+#treemenu1 {
+	display: none;
+}
+#footer {
+	display: none;
+}
+.print_removed {
+	display: none;
+}
+.print_width {
+	margin: 0 auto;
+	text-align: center;
+}
+#contentHeader {
+	width: 100%;
+}
+#main {
+	width: 100%;
+}
+</style>
+<!-- End print preview / print script -->
+<link href="../../../templates_v10/menu/chrometheme/chromestyle.css" rel="stylesheet" type="text/css" />
+<script src="../../../templates_v10/menu/chromejs/chrome.js" type="text/javascript">
+
+/***********************************************
+* Chrome CSS Drop Down Menu- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+</script>
+<script src="../../../templates_v10/accordion/jquery-1.2.6.pack.js" type="text/javascript"></script>
+<script src="../../../templates_v10/accordion/ddaccordion.js" type="text/javascript">
+
+/***********************************************
+* Accordion Content script- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* Visit http://www.dynamicDrive.com for hundreds of DHTML scripts
+* This notice must stay intact for legal use
+***********************************************/
+
+</script>
+<script type="text/javascript">
+
+ddaccordion.init({ //top level headers initialization
+	headerclass: "expandable", //Shared CSS class name of headers group that are expandable
+	contentclass: "categoryitems", //Shared CSS class name of contents group
+	collapseprev: false, //Collapse previous content (so only one open at any time)? true/false 
+	defaultexpanded: [0], //index of content(s) open by default [index1, index2, etc]. [] denotes no content
+	animatedefault: true, //Should contents open by default be animated into view?
+	persiststate: true, //persist state of opened contents within browser session?
+	toggleclass: ["", "openheader"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	togglehtml: ["prefix", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "normal", //speed of animation: "fast", "normal", or "slow"
+	oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+		//do nothing
+	},
+	onopenclose:function(header, index, state, isclicked){ //custom code to run whenever a header is opened or closed
+		//do nothing
+	}
+})
+
+ddaccordion.init({ //2nd level headers initialization
+	headerclass: "subexpandable", //Shared CSS class name of sub headers group that are expandable
+	contentclass: "subcategoryitems", //Shared CSS class name of sub contents group
+	collapseprev: true, //Collapse previous content (so only one open at any time)? true/false 
+	defaultexpanded: [], //index of content(s) open by default [index1, index2, etc]. [] denotes no content
+	animatedefault: false, //Should contents open by default be animated into view?
+	persiststate: true, //persist state of opened contents within browser session?
+	toggleclass: ["opensubheader", "closedsubheader"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	togglehtml: ["none", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "normal", //speed of animation: "fast", "normal", or "slow"
+	oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+		//do nothing
+	},
+	onopenclose:function(header, index, state, isclicked){ //custom code to run whenever a header is opened or closed
+		//do nothing
+	}
+})
+
+
+</script>
+<style type="text/css">
+<!--
+Begin accordion styles -->
+
+.arrowlistmenu{
+width: 100%; /*width of accordion menu*/
+}
+.arrowlistmenu .menuheader {
+	/*CSS class for menu headers in general (expanding or not!)*/
+font: bold 12px Trebuchet MS;
+	color: white;
+	background: black url('../../../templates_v10/accordion/titlebar.jpg') repeat-x left 50%;
+	margin-bottom: 10px; /*bottom spacing between header and rest of content*/;
+	text-transform: uppercase;
+	padding: 4px 0 4px 10px;
+/*header text is indented 10px*/	cursor: hand;
+	cursor: pointer;
+}
+.arrowlistmenu .openheader {
+	/*CSS class to apply to expandable header when it's expanded*/
+background-image: url('../../../templates_v10/accordion/titlebar-active.jpg');
+}
+.arrowlistmenu ul {
+	/*CSS for UL of each sub menu*/
+list-style-type: none;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 8px; /*bottom spacing between each UL and rest of content*/
+}
+.arrowlistmenu ul li {
+	padding-bottom: 2px; /*bottom spacing between menu items*/
+}
+.arrowlistmenu ul li .opensubheader {
+	/*Open state CSS for sub menu header*/
+background: orange !important;
+}
+.arrowlistmenu ul li .closedsubheader {
+	/*Closed state CSS for sub menu header*/
+background: yellow !important;
+}
+.arrowlistmenu ul li a {
+	color: #A70303;
+	background: url('../../../templates_v10/accordion/arrowbullet.png') no-repeat left 50%;
+/*custom bullet list image*/	
+display: block;
+	padding-left: 19px; /*link text is indented 19px*/;
+	text-decoration: none;
+	font-weight: bold;
+	border-bottom: 1px solid #ADADAD;
+	font-size: 90%;
+	padding-right: 0;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.arrowlistmenu ul li a:visited {
+	color: #A70303;
+}
+.arrowlistmenu ul li a:hover {
+	/*hover state CSS*/
+background-color: #AAAAAA;
+}
+.arrowlistmenu ul li a.subexpandable:hover {
+	/*hover state CSS for sub menu header*/
+background: blue;
+}
+<!--
+End accordion styles, begin page styles -->
+
+.border_collapse {
+	border-collapse: collapse;
+}
+.head {
+	background-color: #FFFFFF;
+	text-align: center;
+}
+.template_headerfooterbkg {
+	background-color: #C8C8C8;
+}
+.template_menushadow {
+	background-image: url('../../../templates_v10/images/maindesign/menushadow.jpg');
+}
+.template_menushadow2 {
+	background-image: url('../../../templates_v10/images/maindesign/menushadow2.jpg');
+}
+.template_whitebkg {
+	background-color: #FFFFFF;
+}
+.template_footerformat {
+	text-align: left;
+	font-size: 8pt;
+}
+.site-bkgbottomtransition {
+	background-image: url('../../../templates_v10/images/maindesign/site-bkg_toptrans.jpg');
+	color: #FFFFFF;
+}
+.align_center {
+	text-align: center;
+}
+.align_left {
+	text-align: left;
+}
+.template_blackbkg {
+	background-color: #000000;
+	color: #FFFFFF;
+}
+.align_right {
+	text-align: right;
+}
+.margins_zero {
+	padding: 0px;
+	margin: 0px;
+}
+.footer_vividnet {
+	border-width: 0px;
+	margin-top: -7px;
+	margin-bottom: -7px;
+	font-style: normal;
+}
+.set_border1px {
+	border: 1px solid #000000;
+	border-collapse: collapse;
+}
+.set_border3px {
+	border: 3px solid #000000;
+	border-collapse: collapse;
+}
+.set_border0px {
+	border-width: 0px;
+	border-collapse: collapse;
+}
+.template_sidetext {
+	font-size: 9pt;
+}
+.site-bkgtoptransition {
+	background-color: #1e1e1e;
+}
+</style>
+<link href="../../../templates_v10/default.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body style="margin: 0; background-color: #D7D7D7;">
+
+<table cellpadding="0" cellspacing="0" class="border_collapse" style="width: 100%; height: 100%">
+	<tr>
+		<td colspan="3">
+		<table cellpadding="0" cellspacing="0" style="width: 100%">
+			<tr class="head">
+				<td class="print_removed site-bkgtoptransition">&nbsp;</td>
+				<td class="head site-bkgtoptransition" style="width: 930px">&nbsp;</td>
+				<td class="print_removed site-bkgtoptransition">&nbsp;</td>
+			</tr>
+			<tr class="head">
+				<td class="print_removed site-bkgtoptransition" style="height: 60px">&nbsp;</td>
+				<td class="head" style="height: 60px; width: 930px;">
+				<table cellpadding="0" cellspacing="0" style="width: 100%; height: 60px">
+					<tr>
+						<td class="align_left template_whitebkg print_removed" style="width: 10px">
+						&nbsp;</td>
+						<td class="align_left template_headerfooterbkg" style="width: 566px">
+						<img alt="Los Altos Academy of Engineering" height="60" src="../../../templates_v10/images/mainheader/laae_headtitle.jpg" width="565" /></td>
+						<td class="print_removed template_headerfooterbkg" style="width: 344px">
+						<form id="cse-search-box" action="../../../search/results.htm" class="align_right template_headerfooterbkg margins_zero">
+							<input name="cx" type="hidden" value="013252607434088326132:qb79_e4akxe" />
+							<input name="cof" type="hidden" value="FORID:9" />
+							<input name="ie" type="hidden" value="UTF-8" />
+							<input name="q" size="31" type="text" />
+							<input name="sa" type="submit" value="Search" />
+						</form>
+						<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+						</td>
+						<td class="print_removed template_headerfooterbkg" style="width: 10px">
+						&nbsp;</td>
+					</tr>
+				</table>
+				</td>
+				<td class="print_removed site-bkgtoptransition" style="height: 60px">&nbsp;</td>
+			</tr>
+			<tr class="head">
+				<td class="print_removed site-bkgtoptransition">&nbsp;</td>
+				<td class="print_removed head" style="width: 930px;">
+				<table cellpadding="0" cellspacing="0" style="width: 100%">
+					<tr>
+						<td align="center" style="height: 20px">
+						<div id="chromemenu" class="chromestyle" style="width: 100%">
+							<ul class="mainmenu" style="height: 16px">
+								<li><a href="../../../index.htm">Home</a></li>
+								<li>
+								<a href="../../index.htm" rel="dropmenu1">About 
+								Us</a></li>
+								<li>
+								<a href="../../../press/index.htm" rel="dropmenu2">Press</a></li>
+								<li>
+								<a href="../../../projects/index.htm" rel="dropmenu3">
+								Current Projects</a></li>
+								<li>
+								<a href="../../../programs/index.htm" rel="dropmenu4">
+								Programs We Sponsor</a></li>
+								<li>
+								<a href="../../../laaefamily/index.htm" rel="dropmenu5">
+								Our Family</a></li>
+								<li>
+								<a href="../../../galleries/index.htm" rel="dropmenu6">
+								Galleries</a></li>
+								<li><a href="../../../sponsors/index.htm">Sponsors</a></li>
+								<li><a href="../../../contact/index.htm">Contact Us</a></li>
+							</ul>
+						</div>
+						<!-- 1st drop down menu -->
+						<div id="dropmenu1" class="dropmenudiv">
+							<a href="../../overview/index.htm">Overview</a>
+							<a href="../index.htm">Past Projects and 
+							Participation</a> </div>
+						<!-- 2nd drop down menu -->
+						<div id="dropmenu2" class="dropmenudiv">
+							<a href="../../../press/publications/index.htm">Publications</a>
+							<a href="../../../press/calendar/index.htm">Events Calendar</a>
+						</div>
+						<!-- 3rd drop down menu -->
+						<div id="dropmenu3" class="dropmenudiv">
+							<a href="../../../projects/infusion/index.htm">Infusion Hydrogen 
+							Fuel Cell Vehicle</a>
+							<a href="../../../projects/hice/index.htm">HICE Hydrogen Internal Combustion Vehicle</a>
+							<a href="http://www.laaedarpachallenge.org/">Autonomous 
+							Vehicle</a> 
+							<a href="../../../projects/botball/index.htm">
+							Botball</a> 
+							<a href="../../../projects/bydv/index.htm">Build 
+							Your Dream Vehicle</a>
+							<a href="../../../projects/bridge/index.htm">Bridge Competition</a>
+							<a href="../../../projects/solarboat/index.htm">Solar Boat</a>
+						</div>
+						<!-- 4th drop down menu -->
+						<div id="dropmenu4" class="dropmenudiv">
+							<a href="../../../programs/isaaq/index.htm">ISAAQ</a>
+							<a href="../../../programs/msrobotics/index.htm">Middle School 
+							Robotics</a> </div>
+						<!-- 5th drop down menu -->
+						<div id="dropmenu5" class="dropmenudiv">
+							<a href="../../../laaefamily/acm/index.htm">Advisory Committee</a>
+							<!-- Under construction link
+							<a href="../laaefamily/booster/index.htm">Booster Club</a>
+							--><a href="../../../laaefamily/alumni/index.htm">Alumni</a>
+							<a href="../../../laaefamily/advisors/index.htm">Advisors</a>
+							<a href="../../../laaefamily/students/index.htm">Students</a>
+						</div>
+						<!-- 6th drop down menu -->
+						<div id="dropmenu6" class="dropmenudiv">
+							<a href="../../../laaefamily/alumni/gallery.htm">Alumni</a>
+							<a href="../../../projects/bydv/gallery.htm">Build Your Dream 
+							Vehicle</a>
+							<a href="photogallery/coolrunnings.htm">
+							Cool Runnings</a>
+							<a href="../hpa/gallery.htm">Human Powered 
+							Airplane</a>
+							<a href="dragster.htm">Dragster</a>
+							<a href="photogallery/lightspeed.htm">
+							Light Speed 1/2/3</a>
+							<a href="photogallery/solarshadow.htm">
+							Solar Shadow 1/2</a>
+							<a href="../../../programs/isaaq/zev.htm#images">ZEV Challenge</a>
+							<a href="../../../projects/infusion/gallery.htm">Infusion 
+							Hydrogen Fuel Cell Vehicle</a>
+							<a href="../jpl/2004/index.htm#images">JPL 
+							Invention Challenge</a>
+							<a href="../../../projects/botball/gallery.htm">Botball</a>
+							<a href="../../../projects/solarboat/index.htm">Solar Boat</a>
+							<a href="photogallery/speedracer.htm">
+							Speed Racer</a> </div>
+						<script type="text/javascript">
+
+					cssdropdown.startchrome("chromemenu")
+
+				</script>
+						</td>
+					</tr>
+				</table>
+				</td>
+				<td class="print_removed site-bkgtoptransition">&nbsp;</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td class="pagebkg_side" valign="top">
+		<table cellpadding="0" cellspacing="0" style="width: 100%; height: 350px">
+			<tr>
+				<td class="site-bkgbottomtransition">&nbsp;</td>
+			</tr>
+		</table>
+		</td>
+		<td align="left" style="width: 930px" valign="top">
+		<table cellpadding="0" cellspacing="0" style="width: 100%">
+			<tr class="print_removed">
+				<td class="template_menushadow" style="height: 20px; width: 20px" valign="top">&nbsp;</td>
+				<td class="template_menushadow" style="height: 20px" valign="top">
+				&nbsp;</td>
+				<td class="template_menushadow" style="width: 20px; height: 20px;">&nbsp;</td>
+				<td class="template_menushadow2" style="width: 10px; height: 20px;">&nbsp;</td>
+				<td class="template_menushadow2" style="width: 200px; height: 20px;" valign="top">
+				&nbsp;</td>
+				<td class="template_menushadow2" style="width: 20px; height: 20px;" valign="top">
+				&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="template_whitebkg print_removed" style="width: 20px" valign="top">
+				&nbsp;</td>
+				<td class="template_whitebkg" valign="top">
+				<table cellpadding="0" cellspacing="0" style="width: 100%">
+					<tr>
+						<td>
+						<!-- #BeginEditable "PageHeader" -->
+						<img alt="Light Speed" height="100" src="../../../templates_v10/images/contentheaders/vehicles-lightspeed.jpg" width="660" /><!-- #EndEditable --></td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+					</tr>
+					<tr class="template_whitebkg">
+						<td valign="top">
+						<!-- #BeginEditable "Main" -->
+						<center>
+						<img alt="Light Speed Image" class="set_border1px" height="71" src="../../../images/vehicles/lightSpeed/lightSpeed.gif" width="200" /><br />
+						<br />
+						Designed and Constructed: 1998<br />
+						First Race: Solar BikeRayce USA, S-Class: May 1997 - Topeka, 
+						Kansas<br />
+						<br />
+						<strong><a href="photogallery/lightspeed.htm">Check out 
+						the Light Speed series photo gallery by clicking here.</a></strong><br />
+						<br />
+						<hr /><br />
+						<img alt="Specifications" src="../../../templates_v10/images/contentheaders/subheader-specs.JPG" /></center>
+						<br />
+						<div>
+							<strong>Dimensions</strong><br />
+							Length: 118 in. (300 cm)<br />
+							Width: 36 in. (91.44 cm)<br />
+							Height: 20 in. (50 cm)<br />
+							Weight: 441 lbs (200 kg)<br />
+							<br />
+							<strong>Solar Array</strong><br />
+							Manufacturer: Siemens<br />
+							Model: Type I Cell Type: (Monocrystalline Power Tracker)<br />
+							Number: 90 whole cells<br />
+							Efficiency: 14.5%<br />
+							Total Area: 0.967 m 1 Solectria 6 amp<br />
+							Output: 135w peak, expected average of 108w<br />
+							<br />
+							<strong>Batteries</strong><br />
+							Manufacturer: Panasonic<br />
+							Model: LCR6V12P (16-6V batteries, 96V system)<br />
+							Type: lead-acid <br />
+							Capacity: 1.15 kWh discharge rate at 20 hr<br />
+							Weight: 1.3 lbs per battery (0.6 kg) <br />
+							Total weight: 21.2 lbs (9.6 kg)<br />
+							<br />
+							<strong>Body</strong><br />
+							Composite construction vacuum bag wet lay-up process<br />
+							- Carbon fiber (exterior)<br />
+							- Plexiglas window shield<br />
+							- Fiberglass/matt (interior): foam core<br />
+							<br />
+							<strong>Weight</strong><br />
+							Bottom: 29 lbs (13 kg) <br />
+							Top (solar): 23 lbs (10 kg) <br />
+							Chassis: 3/4 in. mild steel round tube<br />
+							0.05 wall<br />
+							<br />
+							<strong>Motor</strong><br />
+							Manufacturer: Kollemorgen / Industrial Drive<br />
+							Model: TM-2952-3133-B<br />
+							Weight: 14.5 lbs (6.6 kg)<br />
+							Power Output: 746 W<br />
+							Maximum speed: 3600 rpm<br />
+							<br />
+							<strong>Controller</strong><br />
+							Manufacturer: AERL<br />
+							Type: Pulse Width Modulated DC Brush Motor Controller<br />
+							<br />
+							<strong>Suspension</strong><br />
+							Front: Double rubber isolators<br />
+							Rear: Single rubber isolators<br />
+							<br />
+							<strong>Brakes</strong><br />
+							Manufacturer: Hayes mountain bike<br />
+							Type: Dual Piston Hydraulic Disc Brakes (2)<br />
+							<br />
+							<strong>Tires</strong><br />
+							Manufacturer: Bridgestone / Firestone<br />
+							Type: Solar tires (3) at 120 PSI<strong><br />
+							<br />
+							Wheels</strong><br />
+							NewGen one-piece CNC-machined from aluminum billet<br />
+							<strong><br />
+							Performance</strong><br />
+							100 kilometers in 2 hrs 21 min:<strong> 1997 National 
+							Record</strong> for Solar BikeRayce S-Class</div>
+						<!-- #EndEditable --></td>
+					</tr>
+				</table>
+				</td>
+				<td class="template_whitebkg print_removed" style="width: 20px">
+				&nbsp;</td>
+				<td class="template_headerfooterbkg print_removed" style="width: 10px">
+				&nbsp;</td>
+				<td class="template_headerfooterbkg print_removed" style="width: 200px" valign="top">
+				<!-- #BeginEditable "SideBar" -->
+						
+				<div class="arrowlistmenu">
+					<h3 class="menuheader expandable">Legacy Vehicles</h3>
+					<ul class="categoryitems">
+						<li><a href="../../../#">Main Page</a></li>
+						<li><a href="speedracer.htm">Speed Racer</a></li>
+						<li><a href="coolrunnings.htm">Cool Runnings</a></li>
+						<li><a href="solarshadow1.htm">Solar Shadow</a></li>
+						<li><a href="lightspeed1.htm">Light Speed</a></li>
+						<li><a href="highvoltage.htm">High Voltage</a></li>
+						<li><a href="lightspeed2.htm">Light Speed II</a></li>
+						<li><a href="solarshadow2.htm">Solar Shadow II</a></li>
+						<li><a href="lightspeed3.htm">Light Speed III</a></li>
+						<li><a href="dragster.htm">Dragster</a></li>
+					</ul>
+					<h3 class="menuheader expandable">Other Past Projects</h3>
+					<ul class="categoryitems">
+						<li><a href="../hpa/index.htm">Human Powered Airplane</a></li>
+						<li><a href="../jpl/index.htm">JPL Invention Challenge</a></li>
+					</ul>
+					<h3 class="menuheader" style="cursor: default">Contacting Us</h3>
+					<div class="template_sidetext">
+						If you have a suggestion, question, or comment about the 
+						program, feel free to
+						<a href="../../../contact/index.htm">contact us</a>.</div>
+				</div>
+						
+				<!-- #EndEditable --></td>
+				<td class="template_headerfooterbkg print_removed" style="width: 20px" valign="top">
+				&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="template_whitebkg print_removed" style="width: 20px" valign="top">&nbsp;</td>
+				<td class="template_whitebkg" valign="top">&nbsp;</td>
+				<td class="template_whitebkg print_removed" style="width: 20px">&nbsp;</td>
+				<td class="template_headerfooterbkg print_removed" style="width: 10px">&nbsp;</td>
+				<td class="template_headerfooterbkg print_removed" style="width: 200px" valign="top">
+				&nbsp;</td>
+				<td class="template_headerfooterbkg print_removed" style="width: 20px" valign="top">
+				&nbsp;</td>
+			</tr>
+			<tr class="template_headerfooterbkg print_removed">
+				<td style="width: 20px" valign="top">&nbsp;</td>
+				<td colspan="4" valign="top">&nbsp;</td>
+				<td style="width: 20px" valign="top">&nbsp;</td>
+			</tr>
+		</table>
+		</td>
+		<td class="pagebkg_side" valign="top">
+		<table cellpadding="0" cellspacing="0" style="width: 100%; height: 350px">
+			<tr>
+				<td class="site-bkgbottomtransition">&nbsp;</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+<table cellpadding="0" cellspacing="0" style="width: 100%">
+	<tr>
+		<td>&nbsp;</td>
+		<td class="print_removed" style="width: 20px; height: 50px">&nbsp;</td>
+		<td style="height: 50px; width: 890px;">
+		<span class="template_footerformat">© Los Altos Academy of Engineering. 
+		All rights reserved.<br />
+		This website is managed by the Information Technology team and hosted for 
+		LAAE by <a href="http://www.vividnet.com/">
+		<img alt="" class="footer_vividnet" height="23" src="../../../templates_v10/images/footer/vividnet.JPG" width="30" />VividNET</a>.</span></td>
+		<td class="print_removed" style="width: 20px; height: 50px">&nbsp;</td>
+		<td class="print_removed">&nbsp;</td>
+	</tr>
+	<tr>
+		<td style="height: 20px">&nbsp;</td>
+		<td class="print_removed" style="width: 20px; height: 20px">&nbsp;</td>
+		<td class="print_removed" style="height: 20px; width: 890px;">&nbsp;</td>
+		<td class="print_removed" style="width: 20px; height: 20px">&nbsp;</td>
+		<td class="print_removed" style="height: 20px">&nbsp;</td>
+	</tr>
+</table>
+<!-- Begin: Google Analytics Tracking -->
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+	var pageTracker = _gat._getTracker("UA-1154984-1");
+	pageTracker._initData();
+	pageTracker._trackPageview();
+</script>
+<!-- End: Google Analytics Tracking -->
+
+</body>
+
+<!-- #EndTemplate -->
+
+</html>

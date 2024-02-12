@@ -1,0 +1,932 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- © 2010 Los Altos Academy of Engineering. All rights reserved. All code below was created by the LAAE 
+	 Information Technology team, with the assistance from LAAE/LASV alumni (Jeffrey Hsiung and Justin K. Wong).
+	 Exceptions exist to certain parts, that of which are clearly designated. -->
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link href="../../favicon.gif" rel="icon" type="image/gif" />
+<!-- #BeginEditable "doctitle" -->
+<title>FRC 2016 [LASV.ORG]</title>
+<!-- #EndEditable -->
+<!-- Begin print preview / print script -->
+<style media="print" type="text/css">
+body {
+	background-color: #FFFFFF;
+	background-image: none;
+	color: #000000;
+}
+.print_removed {
+	display: none;
+}
+</style>
+<!-- End print preview / print script -->
+<link href="../../templates_v10/menu/chrometheme/chromestyle.css" rel="stylesheet" type="text/css" />
+<script src="../../templates_v10/menu/chromejs/chrome.js" type="text/javascript">
+
+/***********************************************
+* Chrome CSS Drop Down Menu- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+<script src="../../templates_v10/accordion/ddaccordion.js" type="text/javascript">
+/***********************************************
+* Accordion Content script- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* Visit http://www.dynamicDrive.com for hundreds of DHTML scripts
+* This notice must stay intact for legal use
+***********************************************/
+
+</script>
+<script type="text/javascript">
+
+ddaccordion.init({ //top level headers initialization
+	headerclass: "expandable", //Shared CSS class name of headers group that are expandable
+	contentclass: "categoryitems", //Shared CSS class name of contents group
+	collapseprev: false, //Collapse previous content (so only one open at any time)? true/false 
+	defaultexpanded: [0], //index of content(s) open by default [index1, index2, etc]. [] denotes no content
+	onemustopen: true, //Specify whether at least one header should be open always (so never all headers closed)
+	animatedefault: true, //Should contents open by default be animated into view?
+	persiststate: true, //persist state of opened contents within browser session?
+	toggleclass: ["", "openheader"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	togglehtml: ["prefix", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "normal", //speed of animation: "fast", "normal", or "slow"
+	oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+		//do nothing
+	},
+	onopenclose:function(header, index, state, isclicked){ //custom code to run whenever a header is opened or closed
+		//do nothing
+	}
+})
+
+ddaccordion.init({ //2nd level headers initialization
+	headerclass: "subexpandable", //Shared CSS class name of sub headers group that are expandable
+	contentclass: "subcategoryitems", //Shared CSS class name of sub contents group
+	collapseprev: true, //Collapse previous content (so only one open at any time)? true/false 
+	defaultexpanded: [], //index of content(s) open by default [index1, index2, etc]. [] denotes no content
+	animatedefault: false, //Should contents open by default be animated into view?
+	persiststate: true, //persist state of opened contents within browser session?
+	toggleclass: ["opensubheader", "closedsubheader"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	togglehtml: ["none", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "normal", //speed of animation: "fast", "normal", or "slow"
+	oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+		//do nothing
+	},
+	onopenclose:function(header, index, state, isclicked){ //custom code to run whenever a header is opened or closed
+		//do nothing
+	}
+})
+
+
+</script>
+<style type="text/css">
+/* Begin accordion styles */
+.arrowlistmenu {
+	width: 100%; /*width of accordion menu*/
+}
+.arrowlistmenu .menuheader {
+	/*CSS class for menu headers in general (expanding or not!)*/
+font: bold 12px Trebuchet MS;
+	color: white;
+	background: black url('../../templates_v10/accordion/titlebar.jpg') repeat-x left 50%;
+	margin-bottom: 10px; /*bottom spacing between header and rest of content*/;
+	text-transform: uppercase;
+	padding: 4px 0 4px 10px;
+/*header text is indented 10px*/cursor: pointer;
+}
+.arrowlistmenu .openheader {
+	/*CSS class to apply to expandable header when it's expanded*/
+background-image: url('../../templates_v10/accordion/titlebar-active.jpg');
+}
+.arrowlistmenu ul {
+	/*CSS for UL of each sub menu*/
+list-style-type: none;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 8px; /*bottom spacing between each UL and rest of content*/
+}
+.arrowlistmenu ul li {
+	padding-bottom: 2px; /*bottom spacing between menu items*/
+}
+.arrowlistmenu ul li .opensubheader {
+	/*Open state CSS for sub menu header*/
+background: orange !important;
+}
+.arrowlistmenu ul li .closedsubheader {
+	/*Closed state CSS for sub menu header*/
+background: yellow !important;
+}
+.arrowlistmenu ul li a {
+	color: #A70303;
+	background: url('../../templates_v10/accordion/arrowbullet.png') no-repeat left 50%;
+/*custom bullet list image*/
+display: block;
+	padding-left: 19px; /*link text is indented 19px*/;
+	text-decoration: none;
+	font-weight: bold;
+	border-bottom: 1px solid #ADADAD;
+	font-size: 90%;
+	padding-right: 0;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.arrowlistmenu ul li a:visited {
+	color: #A70303;
+}
+.arrowlistmenu ul li a:hover {
+	/*hover state CSS*/
+background-color: #AAAAAA;
+}
+.arrowlistmenu ul li a.subexpandable:hover {
+	/*hover state CSS for sub menu header*/
+background: blue;
+}
+/* End accordion styles, begin page styles */
+.quoteFooter {
+	border-style: none none solid none;
+	border-width: 3px;
+	color: #333333;
+	background-color: #E0E0E0;
+	font-weight: normal;
+	border-collapse: collapse;
+	font-style: normal;
+}
+.border_collapse {
+	border-collapse: collapse;
+}
+.head {
+	background-color: #FFFFFF;
+	text-align: center;
+}
+.template_headerfooterbkg {
+	background-color: #CCCCCC;
+}
+.template_menushadow2 {
+	background-image: url('../../templates_v10/images/maindesign/menushadowside.jpg');
+}
+.template_whitebkg {
+	background-color: #FFFFFF;
+}
+.template_footerformat {
+	text-align: left;
+	font-size: 8pt;
+}
+.site-bkgbottomtransition {
+	background-image: url('../../templates_v10/images/maindesign/site-bkg_toptrans.jpg');
+	color: #FFFFFF;
+	background-repeat: repeat-x;
+}
+.align_center {
+	text-align: center;
+}
+.align_left {
+	text-align: left;
+}
+.align_right {
+	text-align: right;
+}
+.margins_zero {
+	padding: 0px;
+	margin: 0px;
+}
+.footer_vividnet {
+	border-width: 0px;
+	margin-top: -7px;
+	margin-bottom: -7px;
+	font-style: normal;
+}
+.set_border1px {
+	border: 1px solid #000000;
+	border-collapse: collapse;
+}
+.set_border3px {
+	border: 3px solid #000000;
+	border-collapse: collapse;
+}
+.set_border0px {
+	border-width: 0px;
+	border-collapse: collapse;
+}
+.template_sidetext {
+	font-size: 9pt;
+	color: #000000;
+}
+.template_searchtext {
+	font-family: "Trebuchet MS";
+	font-size: 14px;
+	color: #000000;
+}
+.template_headbkg {
+	background-image: url('../../templates_v10/images/mainheader/background.jpg');
+}
+.quoteMain {
+	border-style: none;
+	color: #333333;
+	background-color: #E0E0E0;
+	font-weight: bold;
+	border-collapse: collapse;
+	font-style: italic;
+}
+.site-bkgtopright {
+	background-image: url('../../templates_v10/images/maindesign/site-bkg_top_rightedge.jpg');
+	background-repeat: repeat-y;
+}
+.site-bkgtopleft {
+	background-image: url('../../templates_v10/images/maindesign/site-bkg_top_leftedge.jpg');
+	background-repeat: repeat-y;
+}
+.site-bkgleft {
+	background-image: url('../../templates_v10/images/maindesign/site-bkg_leftedge.jpg');
+	background-repeat: repeat-y;
+}
+.site-bkgright {
+	background-image: url('../../templates_v10/images/maindesign/site-bkg_rightedge.jpg');
+	background-repeat: repeat-y;
+}
+.site-bkgfooter {
+	background-image: url('../../templates_v10/images/footer/background-footer.jpg');
+	background-repeat: repeat-x;
+}
+.site-bkgend {
+	background-image: url('../../templates_v10/images/footer/background-endfade.jpg');
+	background-repeat: repeat-x;
+}
+.style1 {
+	border-width: 0px;
+}
+</style>
+
+<link href="../../templates_v10/default.css" rel="stylesheet" type="text/css" />
+<!-- it works the same with all jquery version from 1.x to 2.x -->
+    <script type="text/javascript" src="../../jQuery/New Stuff 2015/Jssor.Slider.FullPack/js/jquery-1.9.1.min.js"></script>
+    <!-- use jssor.slider.mini.js (40KB) instead for release -->
+    <!-- jssor.slider.mini.js = (jssor.js + jssor.slider.js) -->
+    <script type="text/javascript" src="../../jQuery/New Stuff 2015/Jssor.Slider.FullPack/js/jssor.js"></script>
+    <script type="text/javascript" src="../../jQuery/New Stuff 2015/Jssor.Slider.FullPack/js/jssor.slider.js"></script>
+    <script>
+
+        jQuery(document).ready(function ($) {
+            var options = {
+                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $AutoPlaySteps: 1,                                  //[Optional] Steps to go for each navigation request (this options applys only when slideshow disabled), the default value is 1
+                $AutoPlayInterval: 4000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+                $PauseOnHover: 1,                               //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
+                $Loop: 0,                                       //[Optional] Enable loop(circular) of carousel or not, 0: stop, 1: loop, 2 rewind, default value is 1
+
+                $ArrowKeyNavigation: true,   			            //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
+                $SlideDuration: 500,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+                $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
+                $SlideWidth: 480,                                 //[Optional] Width of every slide in pixels, default value is width of 'slides' container
+                $SlideHeight: 400,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
+                $SlideSpacing: 5, 					                //[Optional] Space between each slide in pixels, default value is 0
+                $DisplayPieces: 1,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
+                $ParkingPosition: 0,                                //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
+                $UISearchMode: 1,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, arrow navigator container, thumbnail navigator container etc).
+                $PlayOrientation: 1,                                //[Optional] Orientation to play slide (for auto play, navigation), 1 horizental, 2 vertical, 5 horizental reverse, 6 vertical reverse, default value is 1
+                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+
+                $ThumbnailNavigatorOptions: {
+                    $Class: $JssorThumbnailNavigator$,              //[Required] Class to create thumbnail navigator instance
+                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+
+                    $Loop: 2,                                       //[Optional] Enable loop(circular) of carousel or not, 0: stop, 1: loop, 2 rewind, default value is 1
+                    $AutoCenter: 3,                                 //[Optional] Auto center thumbnail items in the thumbnail navigator container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 3
+                    $Lanes: 1,                                      //[Optional] Specify lanes to arrange thumbnails, default value is 1
+                    $SpacingX: 4,                                   //[Optional] Horizontal space between each thumbnail in pixel, default value is 0
+                    $SpacingY: 4,                                   //[Optional] Vertical space between each thumbnail in pixel, default value is 0
+                    $DisplayPieces: 4,                              //[Optional] Number of pieces to display, default value is 1
+                    $ParkingPosition: 0,                            //[Optional] The offset position to park thumbnail
+                    $Orientation: 2,                                //[Optional] Orientation to arrange thumbnails, 1 horizental, 2 vertical, default value is 1
+                    $DisableDrag: false                             //[Optional] Disable drag or not, default value is false
+                }
+            };
+
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizes
+            function ScaleSlider() {
+                var parentWidth = jssor_slider1.$Elmt.parentNode.clientWidth;
+                if (parentWidth) {
+                    var sliderWidth = parentWidth;
+
+                    //keep the slider width no more than 680                   
+                    sliderWidth = Math.min(sliderWidth, 680);
+
+                    jssor_slider1.$ScaleWidth(sliderWidth);
+                }
+                else
+                    window.setTimeout(ScaleSlider, 30);
+            }
+            ScaleSlider();
+
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            //responsive code end
+        });
+    </script>
+
+    <!--#region Arrow Navigator Skin Begin -->
+        <style>
+            /* jssor slider thumbnail navigator skin 11 css */
+            /*
+                .jssort11 .p            (normal)
+                .jssort11 .p:hover      (normal mouseover)
+                .jssort11 .pav          (active)
+                .jssort11 .pav:hover    (active mouseover)
+                .jssort11 .pdn          (mousedown)
+                */
+            .jssort11 {
+                position: absolute;
+                width: 200px;
+                height: 400px;
+                font-family: Arial, Helvetica, sans-serif;
+                -moz-user-select: none;
+                -webkit-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+                .jssort11 .p {
+                    position: absolute;
+                    width: 200px;
+                    height: 95px;
+                    background: #181818;
+                }
+
+                .jssort11 .tp {
+                    position: absolute;
+                    top: 10px;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                }
+
+                .jssort11 .i, .jssort11 .pav:hover .i {
+                    position: relative;
+                    top: 3px;
+                    left: 3px;
+                    width: 60px;
+                    height: 30px;
+                    border: white 1px solid;
+                }
+
+                * html .jssort11 .i {
+                    width: 62px;
+                    height: 32px;
+                }
+
+                .jssort11 .pav .i {
+                    border: white 1px solid;
+                }
+
+                .jssort11 .t, .jssort11 .pav:hover .t {
+                    position: absolute;
+                    top: 3px;
+                    left: 68px;
+                    width: 129px;
+                    height: 32px;
+                    line-height: 32px;
+                    text-align: center;
+                    color: #fff;
+                    font-size: 13px;
+                    font-weight: 700;
+                }
+
+                .jssort11 .pav .t, .jssort11 .p:hover .t {
+                    color: #fff;
+                }
+
+                .jssort11 .c, .jssort11 .pav:hover .c {
+                    position: relative;
+                    top: 0px;
+                    left: 3px;
+                    width: 197px;
+                    height: 60px;
+                    line-height: 31px;
+                    color: #fff;
+                    font-size: 11px;
+                    font-weight: 200;
+                    overflow: hidden;
+                }
+
+                .jssort11 .pav .c, .jssort11 .p:hover .c {
+                    color: #fff;
+                }
+
+                .jssort11 .t, .jssort11 .c {
+                    transition: color 2s;
+                    -moz-transition: color 2s;
+                    -webkit-transition: color 2s;
+                    -o-transition: color 2s;
+                }
+
+                .jssort11 .p:hover .t, .jssort11 .pav:hover .t, .jssort11 .p:hover .c, .jssort11 .pav:hover .c {
+                    transition: none;
+                    -moz-transition: none;
+                    -webkit-transition: none;
+                    -o-transition: none;
+                }
+
+                .jssort11 .p:hover, .jssort11 .pav:hover {
+                    background: #333;
+                }
+
+                .jssort11 .pav, .jssort11 .p.pdn {
+                    background: #333;
+                }
+        </style>
+</head>
+
+<body style="margin: 0; background-color: #D7D7D7;">
+
+<table cellpadding="0" cellspacing="0" class="border_collapse" style="width: 100%; height: 100%">
+	<tr>
+		<td colspan="5">
+		<table cellpadding="0" cellspacing="0" style="width: 100%">
+			<tr class="head">
+				<td class="print_removed" style="background-color: #eeeeee">&nbsp;</td>
+				<td class="print_removed site-bkgtopleft" style="width: 25px">&nbsp;</td>
+				<td class="head" style="width: 930px;">
+				<table cellpadding="0" cellspacing="0" style="width: 100%">
+					<tr class="template_headbkg">
+						<td class="print_removed" style="width: 10px"></td>
+						<td class="align_left" style="width: 565px" valign="top">
+						<a href="../../index.htm">
+						<img alt="Los Altos Academy of Engineering" src="../../templates_v10/images/mainheader/laae_headtitle3.jpg" class="style1" /></a></td>
+						<td class="print_removed">
+						<table cellpadding="0" cellspacing="0" style="width: 100%; height: 100%">
+							<tr>
+								<td>
+								<!-- #BeginEditable "Search" -->
+								<form id="cse-search-box" action="../../search/results.htm" class="align_right margins_zero">
+									<input name="cx" type="hidden" value="013252607434088326132:qb79_e4akxe" />
+									<input name="cof" type="hidden" value="FORID:9" />
+									<input name="ie" type="hidden" value="UTF-8" />
+									<input class="template_searchtext" name="q" size="35" type="text" />
+								</form>
+								<!-- #EndEditable -->
+								<script src="../../templates_v10/search/brand.js" type="text/javascript"></script>
+								</td>
+							</tr>
+						</table>
+						</td>
+						<td class="print_removed" style="width: 10px"></td>
+					</tr>
+					<tr class="template_headbkg print_removed">
+						<td colspan="4">
+						<div id="chromemenu" class="chromestyle" style="width: 100%">
+							<ul class="mainmenu">
+								<li><a href="../../index.htm">Home</a></li>
+								<li>
+								<a href="../../about/index.htm" rel="dropmenu1">About 
+								Us</a></li>
+								<li>
+								<a href="../../press/index.htm" rel="dropmenu2">Press</a></li>
+								<li>
+								<a href="../../pastprojects/index.htm" rel="dropmenu3">
+								Past Projects</a></li>
+								<li>
+								<a href="../index.htm" rel="dropmenu4">
+								Current Projects</a></li>
+								<li>
+								<a href="../../laaefamily/index.htm" rel="dropmenu5">
+								Our Family</a></li>
+								<li>
+								<a href="../../galleries/index.htm" rel="dropmenu6">
+								Galleries</a></li>
+								<li><a href="../../sponsors/index.htm">Sponsors</a></li>
+								<li><a href="../../contact/index.htm">Contact Us</a></li>
+							</ul>
+						</div>
+						<!-- 1st drop down menu -->
+						<div id="dropmenu1" class="dropmenudiv">
+							<a href="../../about/overview/index.htm">Overview</a>
+							<a href="../../about/programs/index.htm">Programs We Sponsored</a> </div>
+						<!-- 2nd drop down menu -->
+						<div id="dropmenu2" class="dropmenudiv">
+							<a href="../../press/publications/index.htm">Publications</a>
+							<a href="../../press/calendar/index.htm">Events Calendar</a>
+						</div>
+						<!-- 3rd drop down menu -->
+						<div id="dropmenu3" class="dropmenudiv">
+							</div>
+						<!-- 4th drop down menu -->
+						<div id="dropmenu4" class="dropmenudiv">
+							<a href="../volt/index.htm">Volt</a>
+						<a href="../speedracer/index.htm">Speed Racer</a>
+						<a href="../frc/index.htm">FRC</a></div>
+						<!-- 5th drop down menu -->
+						<div id="dropmenu5" class="dropmenudiv">
+							<a href="../../laaefamily/acm/index.htm">Advisory Committee</a>
+							<!-- Under construction link
+							<a href="../laaefamily/booster/index.htm">Booster Club</a>
+							--><a href="../../laaefamily/alumni/index.htm">Alumni</a>
+							<a href="../../laaefamily/advisors/index.htm">Advisors</a>
+							<a href="../../laaefamily/students/index.htm">Students</a>
+						</div>
+						<!-- 6th drop down menu -->
+						<div id="dropmenu6" class="dropmenudiv">
+							<a href="../../laaefamily/acm/index.htm">Advisory Committee</a>
+							<a href="../../laaefamily/alumni/gallery.htm">Alumni</a>
+							<a href="../../pastprojects/bydv/gallery.htm">Build Your Dream 
+							Vehicle</a>
+							<a href="../../pastprojects/vehicles/photogallery/coolrunnings.htm">
+							Cool Runnings</a>
+							<a href="../../pastprojects/hpa/gallery.htm">Human Powered 
+							Airplane</a>
+							<a href="../../pastprojects/vehicles/dragster.htm">Dragster</a>
+							<a href="../../pastprojects/vehicles/photogallery/lightspeed.htm">
+							Light Speed 1/2/3</a>
+							<a href="../../pastprojects/vehicles/photogallery/solarshadow.htm">
+							Solar Shadow 1/2</a>
+							<a href="../../about/programs/isaaq/zev.htm#images">ZEV Challenge</a>
+							<a href="../../pastprojects/infusion/gallery.htm">Infusion 
+							Hydrogen Fuel Cell Vehicle</a>
+							<a href="../../pastprojects/jpl/2004/index.htm#images">JPL 
+							Invention Challenge</a>
+							<a href="../../pastprojects/botball/gallery.htm">Botball</a>
+							<a href="../../pastprojects/solarboat/index.htm">Solar Boat</a>
+							<a href="../../pastprojects/vehicles/photogallery/speedracer.htm">
+							Speed Racer</a>
+							<a href="../../pastprojects/bridge/index.htm">Bridge Competition</a>
+							<a href="../../pastprojects/hice/gallery.htm">HICE Hydrogen 
+							Internal Combustion Vehicle</a>
+							<a href="../../pastprojects/pulse/gallery.htm">Pulse</a>
+							<a href="gallery.htm">First Tech Challenge</a>
+							<a href="../muc/gallery.htm">Mini Urban Challenge</a>
+							<a href="../../laaefamily/advisors/rfranz-retirement.htm">
+							Bob Franz&#39;s Retirement</a></div>
+						<script type="text/javascript">
+
+					cssdropdown.startchrome("chromemenu")
+
+				</script>
+						</td>
+					</tr>
+				</table>
+				</td>
+				<td class="print_removed site-bkgtopright" style="width: 25px">&nbsp;</td>
+				<td class="print_removed" style="background-color: #eeeeee">&nbsp;</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td class="site-bkgbottomtransition print_removed" valign="top">&nbsp;</td>
+		<td class="site-bkgleft print_removed" style="width: 25px; height: 100%;" valign="top">
+		<img alt="" height="350" src="../../templates_v10/images/maindesign/site-bkg_toptrans_leftedge.jpg" width="25" /></td>
+		<td align="left" style="width: 930px; background-color: #000000" valign="top">
+		<table cellpadding="0" cellspacing="0" style="width: 100%">
+			<tr>
+				<td class="template_whitebkg" style="width: 100%" valign="top">
+				<table cellpadding="0" cellspacing="0" style="width: 100%">
+					<tr>
+						<td><center>
+						<h1> <!-- #BeginEditable "PageHeader" -->
+						<img alt="First Tech Challenge" src="../../FINAL BANNER.jpg" width="700" height="76"/>
+						2015-2016<!-- #EndEditable --></h1>
+						</center></td>
+					</tr>
+				</table>
+				<table cellpadding="0" cellspacing="0" style="width: 100%; height: 100%">
+					<tr>
+						<td style="width: 20px; height: 20px"></td>
+						<td style="height: 20px"></td>
+						<td style="width: 20px; height: 20px"></td>
+					</tr>
+					<tr>
+						<td style="width: 20px; height: 15px;"></td>
+						<td>
+						<!-- #BeginEditable "Main" -->
+						<strong>Overview:</strong> This year we sent a group of 
+						engineers to compete in FIRST STRONGHOLD located at 
+						Valencia High School in Placentia. <br />
+						<br />
+						<strong>Goals:</strong> We wanted to be the best rookie 
+						team competing in the competition while striving to 
+						achieve a relatively high scoring.
+						<br />
+						<br />
+						<strong>Plan:</strong> 
+						The team built a 
+						robot that performed a specific function that would 
+						allow the team to score points consistently.<br />
+						<br />
+						<strong>Results:</strong> 
+						After several weeks into building, the team was not able 
+						to build a robot to complete all of the objectives 
+						required to score points in the competition. Instead, 
+						the team decided to build a "support" robot capable of 
+						breaching the defenses and hand balls over to alliance 
+						members. At the competition, the team was able to do 
+						fairly well, managing to be a consistent "support" 
+						robot. The robot passed through the lowbar efficiently 
+						and challenged the tower several times. At the end of 
+						the competition, the team 
+						placed 28th out of 42 teams.<br />
+						<br />
+						
+						<h1 class="align_center">Competition Pictures:</h1>
+							<div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 680px; height: 400px; background: #000; overflow: hidden; ">
+							<!-- Loading Screen -->
+        						<div u="loading" style="position: absolute; top: 0px; left: 0px;">
+       				     			<div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+       	         					background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
+         							</div>
+           							<div style="position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center;
+                					top: 0px; left: 0px;width: 100%;height:100%;">
+            					</div>
+        					</div>
+
+       						<!-- Slides Container -->
+        					<div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 480px; height: 400px;
+            				overflow: hidden;">
+          						<div>
+	
+									<img alt="" u="image" src="../../images/frc photos/Another battle picture.JPG" />										
+									<div u="thumb">
+                   						<img class="i"  src="../../images/frc photos/Another battle picture.JPG" />
+                  			 			<div class="t"></div>
+                    					<div class="c">Competition Alliance Battle 1</div>
+                    				</div>
+               					</div>
+								<div>
+                					<img alt="" u="image" src="../../images/frc photos/Battle picture.JPG"/>              						
+                					<div u="thumb">
+                						<img class="i" src="../../images/frc photos/Battle picture.JPG" />
+               					   	 	<div class="t"> </div>
+                 						<div class="c">Competition Alliance Battle 2</div>
+           		  					</div>
+           						</div>
+								<div>
+                					<img alt="" u="image" src="../../images/frc photos/Close up of red alliance.JPG"/>              						
+                					<div u="thumb">
+                						<img class="i" src="../../images/frc photos/Close up of red alliance.JPG" />
+               					   	 	<div class="t"> </div>
+                 						<div class="c">Red Alliance</div>
+           		  					</div>
+           						</div>
+           						<div>
+                					<img alt="" u="image" src="../../images/frc photos/Picture of arena tower.JPG"/>	              						
+                					<div u="thumb">
+                						<img class="i" src="../../images/frc photos/Picture of arena tower.JPG" />
+               					   	 	<div class="t"> </div>
+                 						<div class="c">Arena Tower</div>
+           		  					</div>
+           						</div>
+           						<div>
+                					<img alt=""  u="image" src="../../images/frc photos/Challenging tower.JPG"/>              						
+                					<div u="thumb">
+                						<img class="i" src="../../images/frc photos/Challenging tower.JPG" />
+               					   	 	<div class="t"> </div>
+                 						<div class="c">Challenging Arena Tower</div>
+           		  					</div>
+           						</div>
+           						<div>
+                					<img alt=""  u="image" src="../../images/frc photos/Band entertainment.JPG"/>              						
+                					<div u="thumb">
+                						<img class="i" src="../../images/frc photos/Band entertainment.JPG" />
+               					   	 	<div class="t"></div>
+                 						<div class="c">Competition Break Performance</div>
+           		  					</div>
+           						</div>
+           						<div>
+                					<img alt=""  u="image" src="../../images/frc photos/Another close up.JPG"/>              						
+                					<div u="thumb">
+                						<img class="i" src="../../images/frc photos/Another close up.JPG" />
+               					   	 	<div class="t"> </div>
+                 						<div class="c">Robot Close Up 1</div>
+           		  					</div>
+           						</div>
+           						<div>
+                					<img alt=""  u="image" src="../../images/frc photos/Close up work on robot.JPG" />              						
+                					<div u="thumb">
+                						<img class="i" src="../../images/frc photos/Close up work on robot.JPG" />
+               					   	 	<div class="t"> </div>
+                 						<div class="c">Robot Close Up 2</div>
+           		  					</div>
+           						</div>
+           						<div>
+                					<img alt=""  u="image" src="../../images/frc photos/Sponosors close up.JPG" />              						
+                					<div u="thumb">
+                						<img class="i" src="../../images/frc photos/Sponosors close up.JPG" />
+               					   	 	<div class="t"> </div>
+                 						<div class="c">Sponsors</div>
+           		  					</div>
+           						</div>
+           						<div>
+                					<img alt=""  u="image" src="../../images/frc photos/Team collaborating on how to edit robot.JPG" />              						
+                					<div u="thumb">
+                						<img class="i" src="../../images/frc photos/Team collaborating on how to edit robot.JPG" />
+               					   	 	<div class="t"> </div>
+                 						<div class="c">Team Discussion</div>
+           		  					</div>
+           						</div>
+           						<div>
+                					<img alt=""  u="image" src="../../images/frc photos/Working on robot.JPG" />              						
+                					<div u="thumb">
+                						<img class="i" src="../../images/frc photos/Working on robot.JPG" />
+               					   	 	<div class="t"> </div>
+                 						<div class="c">Robot Edits</div>
+           		  					</div>
+           						</div>
+           						<div>
+                					<img alt=""  u="image" src="../../images/frc photos/Interview with judges.JPG" />              						
+                					<div u="thumb">
+                						<img class="i" src="../../images/frc photos/Interview with judges.JPG" />
+               					   	 	<div class="t"> </div>
+                 						<div class="c">Interview w/ Judges</div>
+           		  					</div>
+           						</div>
+           						<div>
+                					<img alt=""  u="image" src="../../images/frc photos/Shield Icon.JPG" />              						
+                					<div u="thumb">
+                						<img class="i" src="../../images/frc photos/Shield Icon.JPG" />
+               					   	 	<div class="t"> </div>
+                 						<div class="c">LAHS Shield Icon</div>
+           		  					</div>
+           						</div>
+           							<div>
+                					<img alt="" u="image" src="../../images/frc photos/Scoreboard.JPG"/>	              						
+                					<div u="thumb">
+                						<img class="i" src="../../images/frc photos/Scoreboard.JPG" />
+               					   	 	<div class="t"> </div>
+                 						<div class="c">Scoreboard 1</div>
+           		  					</div>
+           						</div>
+           						<div>
+                					<img alt=""  u="image" src="../../images/frc photos/Scoreboard1.JPG"/>              						
+                					<div u="thumb">
+                						<img class="i" src="../../images/frc photos/Scoreboard1.JPG" />
+               					   	 	<div class="t"> </div>
+                 						<div class="c">Scoreboard 2</div>
+           		  					</div>
+           						</div>
+           						<div>
+                					<img alt=""  u="image" src="../../images/frc photos/PitArea.JPG"/>              						
+                					<div u="thumb">
+                						<img class="i" src="../../images/frc photos/PitArea.JPG" />
+               					   	 	<div class="t"></div>
+                 						<div class="c">Pit Area</div>
+           		  					</div>
+           						</div>
+           						<div>
+                					<img alt=""  u="image" src="../../images/frc photos/Programming.JPG"/>              						
+                					<div u="thumb">
+                						<img class="i" src="../../images/frc photos/Programming.JPG" />
+               					   	 	<div class="t"> </div>
+                 						<div class="c">Program Editing</div>
+           		  					</div>
+           						</div>
+           						<div>
+                					<img alt=""  u="image" src="../../images/frc photos/Loading Up.JPG" />              						
+                					<div u="thumb">
+                						<img class="i" src="../../images/frc photos/Loading Up.JPG" />
+               					   	 	<div class="t"> </div>
+                 						<div class="c">Loading Robot on Field</div>
+           		  					</div>
+           						</div>
+           						<div>
+                					<img alt=""  u="image" src="../../images/frc photos/Scoring Boulders.JPG" />              						
+                					<div u="thumb">
+                						<img class="i" src="../../images/frc photos/Scoring Boulders.JPG" />
+               					   	 	<div class="t"> </div>
+                 						<div class="c">Attempting to Score Boulders</div>
+           		  					</div>
+           						</div>
+           						<div>
+                					<img alt=""  u="image" src="../../images/frc photos/Drivers Area.JPG" />              						
+                					<div u="thumb">
+                						<img class="i" src="../../images/frc photos/Drivers Area.JPG" />
+               					   	 	<div class="t"> </div>
+                 						<div class="c">Driver's Area</div>
+           		  					</div>
+           						</div>
+       
+           						</div>
+           					
+           					<div u="thumbnavigator" class="jssort11" style="right:0px; top:0px;">
+          						<!-- Thumbnail Item Skin Begin -->
+            					<div u="slides" style="cursor: default;">
+             				  		<div u="prototype" class="p" style="top: 0; left: 0;">
+               				    		<div u="thumbnailtemplate" class="tp"></div>
+                					</div>
+           						</div>
+           						<!-- Thumbnail Item Skin End -->
+        					</div>
+        					<!--#endregion ThumbnailNavigator Skin End -->
+        					<a style="display: none" href="http://www.jssor.com">Carousel Slider</a>
+   						 </div>
+						
+						<!-- #EndEditable -->
+						</td>
+						<td style="width: 20px; height: 15px;"></td>
+					</tr>
+					<tr>
+						<td style="width: 20px; height: 20px"></td>
+						<td style="height: 20px"></td>
+						<td style="width: 20px; height: 20px"></td>
+					</tr>
+				</table>
+				</td>
+				<td class="template_headerfooterbkg print_removed" style="width: 230px;" valign="top">
+				<table cellpadding="0" cellspacing="0" style="width: 230px">
+					<tr>
+						<td class="template_menushadow2" style="width: 10px; height: 20px;">
+						</td>
+						<td class="template_menushadow2" style="height: 20px">
+						</td>
+						<td class="template_menushadow2" style="width: 20px">
+						</td>
+					</tr>
+					<tr class="template_headerfooterbkg">
+						<td style="width: 10px"></td>
+						<td valign="top">
+						<!-- #BeginEditable "SideBar" -->
+						<div class="arrowlistmenu">
+															<h3 class="menuheader expandable">First tech 
+							challenge</h3>
+							<ul class="categoryitems">
+								<li><a href="index.htm">Home</a></li>
+							    <li><a href="frc 2016.htm">2015-2016</a></li>
+							
+
+							</ul>
+							<h3 class="menuheader" style="cursor: default">Contacting 
+							Us</h3>
+							<div class="template_sidetext">
+								If you have a suggestion, question, or comment about 
+								the program, feel free to
+								<a href="../../contact/index.htm">contact us</a>.</div>
+						</div>
+						
+						<!-- #EndEditable --></td>
+						<td style="width: 20px">&nbsp;</td>
+					</tr>
+					<tr class="template_headerfooterbkg">
+						<td style="width: 10px; height: 20px;">&nbsp;</td>
+						<td style="height: 20px">&nbsp;</td>
+						<td style="width: 20px; height: 20px;">&nbsp;</td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+				<table cellpadding="0" cellspacing="0" style="width: 100%">
+					<tr class="site-bkgfooter">
+						<td class="print_removed" style="width: 20px; height: 50px">&nbsp;</td>
+						<td style="height: 50px">
+						<span class="template_footerformat">© Los Altos Academy 
+						of Engineering. All rights reserved.<br />
+						This website is managed by the Information Technology team 
+						and hosted for LAAE by
+						<a href="http://www.vividnet.com/">
+						<img alt="" class="footer_vividnet print_removed" height="23" src="../../templates_v10/images/footer/vividnet_new.JPG" width="30" />VividNET</a>.</span></td>
+						<td class="print_removed" style="height: 50px; width: 90px;">&nbsp;</td>
+						<td class="print_removed" style="height: 50px; width: 90px;">
+						<center>
+						<!--
+						<p>
+						<a href="http://jigsaw.w3.org/css-validator/check/referer">
+						<img alt="Valid CSS!" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" style="border: 0; width: 88px; height: 31px" />
+						</a></p>--></center></td>
+						<td class="print_removed" style="width: 20px; height: 50px">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="site-bkgend" style="height: 20px" colspan="5">
+						&nbsp;</td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+		<td class="site-bkgright print_removed" style="width: 25px; height: 100%;" valign="top">
+		<img alt="" height="350" src="../../templates_v10/images/maindesign/site-bkg_toptrans_rightedge.jpg" width="25" /></td>
+		<td class="site-bkgbottomtransition print_removed" valign="top">&nbsp;</td>
+	</tr>
+</table>
+<!-- Begin: Google Analytics Tracking -->
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+	var pageTracker = _gat._getTracker("UA-1154984-1");
+	pageTracker._initData();
+	pageTracker._trackPageview();
+</script>
+<!-- End: Google Analytics Tracking -->
+
+</body>
+
+</html>

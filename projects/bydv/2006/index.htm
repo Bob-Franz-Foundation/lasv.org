@@ -1,0 +1,813 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+
+<!-- #BeginTemplate "../../../templates_v9/Main.dwt" -->
+
+<head>
+
+<!-- ©2007 Los Altos Academy of Engineering. All Rights Reserved. All code below was created by 
+	 The LAAE Information Technology team with assistance from LAAE/LASV Alumni-->
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 12.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<!-- #BeginEditable "doctitle" -->
+<title>LASV.ORG &gt;&gt; Projects: BYDV 2006</title>
+<style type="text/css">
+.style5 {
+	font-size: 12pt;
+}
+.style6 {
+	font-size: 14pt;
+}
+.style11 {
+	font-size: 8pt;
+}
+.style12 {
+	font-size: 10pt;
+	font-family: Verdana;
+	margin: 0px;
+	padding: 0px;
+	line-height: 140%;
+	text-align: left;
+}
+.style13 {
+	font-size: 8pt;
+	font-family: Verdana;
+	margin: 0px;
+	padding: 0px;
+	line-height: 140%;
+	text-align: left;
+}
+.style14 {
+	font-size: 10pt;
+}
+.style15 {
+	font-size: 10pt;
+	font-family: Verdana;
+	margin: 0px;
+	padding: 0px;
+	line-height: 140%;
+	text-align: center;
+}
+</style>
+<!-- #EndEditable -->
+
+<style type="text/css" media="print">
+  body{ background-color:#FFFFFF; background-image:none; color:#000000 }
+  #treemenu1{ display:none;}
+  #footer{ display:none;}
+  .print_removed{display: none;}
+  .print_width{margin: 0 auto; text-align:center;}
+  #contentHeader{ width:100%;}
+  #main{ width:100%;}
+</style>
+<style type="text/css">
+
+/*Credits: Dynamic Drive CSS Library */
+/*URL: http://www.dynamicdrive.com/style/ */
+
+.suckertreemenu ul{
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+
+/*Top level list items*/
+.suckertreemenu ul li{
+position: relative;
+display: inline;
+float: left;
+font-family: Verdana;
+font-size: 9pt;
+background-color: #979797; /*overall menu background color*/
+}
+
+/*Top level menu link items style*/
+.suckertreemenu ul li a{
+display: block;
+width: 0px; /*Width of top level menu link items*/
+height: 20px;
+padding: 2px 0px;
+border: 1px solid gray;
+border-left-width: 1pt;
+text-decoration: none;
+color: #111111;
+}
+	
+/*1st sub level menu*/
+.suckertreemenu ul li ul{
+left: 0;
+position: absolute;
+top: 1em; /* no need to change, as true value set by script */
+display: block;
+visibility: hidden;
+}
+
+/*Sub level menu list items (undo style from Top level List Items)*/
+.suckertreemenu ul li ul li{
+display: list-item;
+float: none;
+}
+
+/*All subsequent sub menu levels offset after 1st level sub menu */
+.suckertreemenu ul li ul li ul{ 
+left: 159px; /* no need to change, as true value set by script */
+top: 0;
+}
+
+/* Sub level menu links style */
+.suckertreemenu ul li ul li a{
+display: block;
+width: 190px; /*width of sub menu levels*/
+height: 20px;
+color: #121212;
+text-decoration: none;
+padding: 0px 3px;
+border: 1px solid gray;
+}
+
+.suckertreemenu ul li a:hover{
+background-color: #111111;
+color: #DADADA;
+}
+
+
+/*Background image for subsequent level menu list links */
+.suckertreemenu .subfoldericon{
+background: #979797 url('../../../templates_v9/images/mainmenu/arrow-right.gif') no-repeat right 50%;
+}
+
+/* Holly Hack for IE \*/
+* html .suckertreemenu ul li ul li { float: left;}
+/* End */
+
+/* End */
+
+
+}
+.style2 {
+	font-size: 7pt;
+	font-family: Verdana;
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	text-transform: none;
+}
+.footer {
+	font-size: 8pt;
+	font-family: Verdana;
+	font-weight: 500;
+	font-style: normal;
+	font-variant: normal;
+}
+
+
+.style5 {
+	vertical-align: middle;
+	border-style: solid;
+	border-width: 0;
+}
+
+
+.sidetext {
+	font-family: Verdana;
+	line-height: 140%;
+	padding: 0px;
+	margin: 0px;
+}
+
+
+.pagehead {
+	background-image: url('../../../templates_v9/images/mainheader/pagehead_bkg.png');
+}
+
+
+</style>
+
+<script type="text/javascript">
+
+//SuckerTree Horizontal Menu (Sept 14th, 06)
+//By Dynamic Drive: http://www.dynamicdrive.com/style/
+
+var menuids=["treemenu1"] //Enter id(s) of SuckerTree UL menus, separated by commas
+
+function buildsubmenus_horizontal(){
+for (var i=0; i<menuids.length; i++){
+  var ultags=document.getElementById(menuids[i]).getElementsByTagName("ul")
+    for (var t=0; t<ultags.length; t++){
+		if (ultags[t].parentNode.parentNode.id==menuids[i]){ //if this is a first level submenu
+			ultags[t].style.top=ultags[t].parentNode.offsetHeight+"px" //dynamically position first level submenus to be height of main menu item
+			ultags[t].parentNode.getElementsByTagName("a")[0].className="mainfoldericon"
+		}
+		else{ //else if this is a sub level menu (ul)
+		  ultags[t].style.left=ultags[t-1].getElementsByTagName("a")[0].offsetWidth+"px" //position menu to the right of menu item that activated it
+    	ultags[t].parentNode.getElementsByTagName("a")[0].className="subfoldericon"
+		}
+    ultags[t].parentNode.onmouseover=function(){
+    this.getElementsByTagName("ul")[0].style.visibility="visible"
+    }
+    ultags[t].parentNode.onmouseout=function(){
+    this.getElementsByTagName("ul")[0].style.visibility="hidden"
+    }
+    }
+  }
+}
+
+if (window.addEventListener)
+window.addEventListener("load", buildsubmenus_horizontal, false)
+else if (window.attachEvent)
+window.attachEvent("onload", buildsubmenus_horizontal)
+</script>
+
+<link rel="stylesheet" type="text/css" href="../../../templates_v9/main.css">
+
+</head>
+
+
+<body style="background-attachment: fixed; background-color: #000000; margin-top: 0; margin-bottom: 0;">
+
+<div align="center">
+	<table border="0" cellpadding="0" width="895" style="border-collapse: collapse" id="table2">
+		<tr>
+			<th height="100" width="250" bgcolor="#FFFFFF">
+			<!-- MSCellType="ContentHead" -->
+			<img src="../../../templates_v9/images/mainheader/laae_logo.gif" width="248" height="62"></th>
+			<th height="100" align="left" bgcolor="#FFFFFF" width="677" class="pagehead">
+&nbsp;</th>
+		</tr>
+		</table>
+	<table border="0" cellpadding="0" width="895" style="border-collapse: collapse" height="0">
+		<tr>
+			<td align="center" height="20" colspan="7" bordercolorlight="#808080" bordercolordark="#808080" bgcolor="#808080" width="889">
+<table border="0" cellpadding="0" style="border-collapse: collapse; width: 885px;" id="table1">
+		<tr>
+			<td align="center" bordercolorlight="#808080" bordercolordark="#808080" bgcolor="#808080" width="881" style="height: 13px">
+			<div class="suckertreemenu">
+		<ul id="treemenu1" style="height: 17px; width: 895px;">
+		<li style="left: 0px; top: 0px; width: 60px">
+		<p style="margin-top: 0; margin-bottom: 0">
+		<a href="../../../index.htm" style="width: 60px">
+		Home</a></li>
+		<li style="left: 0px; top: 0px; width: 85px">
+		<p style="margin-top: 0; margin-bottom: 0">
+		<a href="../../../about/index.htm" style="width: 85px">About Us</a>
+		  <ul>
+		  <li>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="../../../about/overview/index.htm">
+			Mission Statement</a></li>
+		  <li>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="../../../about/overview/index.htm">
+			Course Offerings</a></li>
+		  <li>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="../../../about/past/index.htm">
+			Past Projects</a>
+			<ul>
+		    <li>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="../../../about/past/vehicles/index.htm">
+			Legacy Vehicles</a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="../../../about/past/hpa/index.htm">Human Powered Airplane</a></li>
+		    </ul>
+		    </li>
+
+		</ul>
+		</li>
+		<li style="left: 0px; top: 0px; width: 70px">
+		<p style="margin-top: 0; margin-bottom: 0">
+		<a href="../../../press/index.htm" style="width: 70px">News</a>
+		  <ul>
+		  <li>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="../../../press/updates/index.htm">
+			Event Updates</a></li>
+		  <li>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="../../../press/publications/index.htm">
+			Publications</a></li>
+		  <li>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="../../../press/calendar/index.htm">
+			Calendar</a></li>
+
+		  </ul>
+		</li>
+		<li style="left: 0px; top: 0px; width: 75px">
+		<p style="margin-top: 0; margin-bottom: 0">
+		<a href="../../index.htm" style="width: 75px">Projects</a>
+		  <ul>
+		  <li>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="../../botball/index.htm">
+			Botball</a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="../../bridge/index.htm">
+			Bridge Competition</a></li>
+		  <li>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="../index.htm">
+			Build Your Dream Vehicle</a></li>
+		  <li>
+			<p style="margin-top: 0; margin-bottom: 0"><a href="http://www.laaedarpachallenge.org/">
+			Autonomous Vehicle</a></li>		  
+		  <li>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="../../infusion/index.html">
+			Infusion Fuel Cell Vehicle</a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="../../hice/index.html">
+			HICE Hydrogen Internal Combustion Vehicle</a></li>
+		  <li>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="../../solarboat/index.htm">
+			Solar Boat</a></li>
+		  </ul>
+		</li>
+		<li style="left: 0px; top: 0px; width: 155px">
+		<p style="margin-top: 0; margin-bottom: 0">
+		<a href="../../../programs/index.htm" style="width: 155px">Programs We Sponsor</a>
+		  <ul>
+		  <li>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="../../../programs/isaaq/index.htm">
+			ISAAQ</a></li>
+		  <li>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="../../../programs/msrobotics/index.htm">
+			Middle School Robotics</a></li>
+		  </ul>
+		</li>
+		<li style="left: 0px; top: 0px; width: 120px">
+		<p style="margin-top: 0; margin-bottom: 0">
+		<a href="../../../laaefamily/index.htm" style="width: 120px">The LAAE Family</a>
+		  <ul>
+		  <li>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="../../../laaefamily/acm/index.htm">
+			Advisory Committee</a></li>
+			<ul>
+			<li>
+				<p style="margin-top: 0; margin-bottom: 0">
+				<a href="../../../laaefamily/acm/2007/index.htm">
+				2007</a></li>
+			<li>
+				<p style="margin-top: 0; margin-bottom: 0">
+				<a href="../../../laaefamily/acm/2006/index.htm">
+				2006</a>
+			</li>
+			</ul>
+		  <li>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="../../../laaefamily/alumni/index.htm">
+			Alumni</a>
+		    <ul>
+		    <li>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="../../../laaefamily/alumni/statements/index.htm">
+			Personal Statements</a></li>
+		    <li>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="../../../laaefamily/alumni/gallery.htm">
+			Photo Gallery</a></li>
+		    </ul>
+		  </li>
+		  <li>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="../../../laaefamily/advisors/index.htm">
+			Advisors</a>
+		    <ul>
+		    <li>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="../../../laaefamily/advisors/rfranz.htm">
+			Robert Franz</a></li>
+		    <li>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="../../../laaefamily/advisors/mkeirns.htm">
+			Mike Keirns</a></li>
+		    <li>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="../../../laaefamily/advisors/erichter.htm">
+			Ed Richter</a></li>
+		    <li>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="../../../laaefamily/advisors/jbrown.htm">
+			Jason Brown</a></li>
+		    </ul>
+		  </li>
+		  <li>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="../../../laaefamily/students/index.htm">
+			Students</a></p>
+			<ul>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="../../../laaefamily/students/2009/index.htm">
+			2008-2009</a></li>
+			<li>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="../../../laaefamily/students/2008/index.htm">
+			2007-2008</a></li>
+		    <li>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="../../../laaefamily/students/2007/index.htm">
+			2006-2007</a></li>
+		    <li>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="../../../laaefamily/students/2006/index.htm">
+			2005-2006</a></li>
+		    <li>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="../../../laaefamily/students/2005/index.htm">
+			2004-2005</a></li>
+		    <li>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="../../../laaefamily/students/2004/index.htm">
+			2003-2004</a></li>
+		    <li>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="../../../laaefamily/students/2002/index.htm">
+			2001-2002</a></li>
+		    </ul>
+		   </li>
+		</ul>
+		</li>
+		<li style="left: 0px; top: 0px; width: 105px">
+		<p style="margin-top: 0; margin-bottom: 0">
+		<a href="../../../galleries/index.htm" style="width: 105px">Photo Galleries</a>
+		</li>
+		
+		
+		<li style="left: 0px; top: 0px; width: 75px">
+		<p style="margin-top: 0; margin-bottom: 0">
+		<a href="../../../sponsors.htm" style="width: 75px">Sponsors</a></li>
+		
+		<li style="left: 0px; top: 0px; width: 83px">
+		<p style="margin-top: 0; margin-bottom: 0">
+		<a href="../../../contact.htm" style="width: 83px; border-right: 0">
+		Contact Us</a></li>
+		
+		</ul>
+		</div>
+		
+		</td>
+		</tr>
+		</table>
+		</td>
+		</tr>
+						
+		<tr class="print_removed">
+			<td align="center" style="height: 15px; width: 220px;" colspan="3">
+			&nbsp;</td>
+			<td align="center" bgcolor="#808080" rowspan="4" style="width: 20px">
+			</td>
+			<td align="center" width="600" colspan="3" style="height: 15px" class="gray_bkg">
+			&nbsp;</td>
+		</tr>
+		<tr>
+			<td class="print_removed" align="center" valign="top" bgcolor="#C0C0C0" rowspan="2" style="width: 10px">
+			&nbsp;</td>
+			<td class="print_removed" align="center" valign="top" bgcolor="#C0C0C0" rowspan="2" style="width: 200px">
+			<!-- #BeginEditable "SideBar" -->
+			<p><strong>BYDV 2006 PHOTOS</strong></p>
+			<table id="table6" border="0" cellpadding="2" cellspacing="3" style="border-collapse: collapse" width="200">
+				<tr>
+					<td align="center" width="100">
+					<a href="../../../images/bydv/2006/bydv2006-05.JPG">
+					<img border="01" height="60" src="../../../images/bydv/2006/bydv2006-05_th.JPG" width="80"></a></td>
+					<td align="center" width="100">
+					<a href="../../../images/bydv/2006/bydv2006-06.JPG">
+					<img border="01" height="60" src="../../../images/bydv/2006/bydv2006-06_th.JPG" width="80"></a></td>
+				</tr>
+				<tr>
+					<td align="center" width="100">
+					<a href="../../../images/bydv/2006/bydv2006-18.JPG">
+					<img border="01" height="60" src="../../../images/bydv/2006/bydv2006-18_th.JPG" width="80"></a></td>
+					<td align="center" width="100">
+					<a href="../../../images/bydv/2006/bydv2006-20.JPG">
+					<img border="01" height="60" src="../../../images/bydv/2006/bydv2006-20_th.JPG" width="80"></a></td>
+				</tr>
+			</table>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<font face="Verdana" size="2"><a href="../gallery.htm">More&gt;&gt;</a></font></p>
+			<hr>
+			<p class="style12"><strong><a href="../index.htm">Build Your Dream Vehicle</a></strong><font color="#000000" face="Verdana" size="2"><br>
+			<span class="style11">BYDV requires students to use mathematics, science, 
+			social studies, language arts, technology, and design skills to develop 
+			and design a vehicle.</span></font></p>
+			<hr>
+			<p class="style12"><a href="../../index.htm"><strong>Projects</strong></a></p>
+			<p class="style13">LAAE currently works on multiple projects, including 
+			some that recur year after year. Some of the most notable projects we 
+			currently work on include our hydrogen fuel cell vehicle and the autonomous 
+			vehicle.</p>
+			<!-- #EndEditable -->
+			<br>
+			<br>
+			<br>
+			<br>
+			</td>
+			<td class="print_removed" align="center" valign="top" bgcolor="#C0C0C0" rowspan="2" style="width: 10px">
+			&nbsp;</td>
+			
+			<td align="center" width="5" valign="top" class="pagehead">
+			<img alt src="../../../images/contentheader/border.jpg" width="7" height="118" class="print_removed"></td>
+			<td class="print_width" valign="top" style="width: 645px; height:10px; background-color:#FFF; margin: 0 auto;">
+			<div id="contentHeader">
+			<!-- #BeginEditable "Content%20Header" -->
+				<h1 style="margin-top: 0; margin-bottom: 0">
+				<img height="117" src="../../../images/contentheader/projects-bydv2006.JPG" width="645"></h1>
+			<!-- #EndEditable --></div></td>
+			<td align="center" width="5" valign="top" class="pagehead">
+			<img alt src="../../../images/contentheader/border.jpg" width="7" height="118" class="print_removed"></td>
+		</tr>
+		<tr>
+			<td align="center" width="5" valign="top" bgcolor="#FFFFFF">
+			&nbsp;</td>
+			<td class="print_width" valign="top" style="width: 645px; background-color:#FFF; text-align: center;">
+			<div id="main">
+			<!-- #BeginEditable "Main" -->
+				<span class="style2">
+				<p class="style4" style="margin-top: 0; margin-bottom: 0">
+				<font face="Verdana"><span class="texttitle"><font size="2">
+				<a href="#BYDV 2006 flash">For BYDV 2006 photos, click here.</a></font></span></font></p>
+				<p class="style4" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+				<p class="style4" style="margin-top: 0; margin-bottom: 0">
+				<font face="Verdana"><strong>BYDV Team wins first in Nationals.</strong></font></p>
+				<p class="style4" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+				<p class="style5" style="margin-top: 0; margin-bottom: 0">
+				<font face="Verdana"><strong><span class="style3">
+				<font size="2">Competition Sponsors</font></span></strong><span class="style3"><font size="2">:</font><span style="font-weight: 400"><font size="2"> 
+				DaimlerChrysler &amp; Candor Marketing</font></span></span></font></p>
+				<p class="style5" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+				<p align="center" class="style6" style="margin-top: 0; margin-bottom: 0">
+				<strong><font face="Verdana" size="2">What: </font></strong></p>
+				<table id="table4" align="center" border="0" style="border-collapse: collapse" width="450">
+					<tr>
+						<td><span class="style2">
+						<p align="left" class="style6" style="margin-top: 0; margin-bottom: 0">
+						<span style="font-weight: 400">
+						<font face="Verdana" size="2">“The Build Your Dream Vehicle 
+						program exposes high school students to career opportunities 
+						in the automotive industry and provides opportunities for 
+						them to enhance their professional skills. Students are 
+						challenged to create, design, and present a futuristic, 
+						environmentally friendly concept vehicle—complete with a 
+						three-dimensional model and/or drawings.”</font></span></p>
+						<p align="right" class="style6" style="margin-top: 0; margin-bottom: 0">
+						<span style="font-weight: 400">
+						<font face="Verdana" size="2">- DaimlerChrysler Corporation</font></span></p>
+						</span></td>
+					</tr>
+				</table>
+				<p align="center" class="style6" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+				<p class="style5" style="margin-top: 0; margin-bottom: 0">
+				<font face="Verdana"><strong><span class="style3">
+				<font size="2">When: </font></span></strong>
+				<span style="font-weight: 400"><span class="style3">
+				<font size="2">May 21-23, 2006</font></span></span></font></p>
+				<p class="style5" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+				<p class="style5" style="margin-top: 0; margin-bottom: 0">
+				<font face="Verdana"><strong><span class="style3">
+				<font size="2">Who:<span style="font-weight: 400"> </span>
+				</font></span></strong><span style="font-weight: 400"><em>
+				<span class="style3"><font size="2">[participants come from high 
+				schools all over the nation, approx. 250 schools]</font></span></em></span></font></p>
+				<p class="style5" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+				<p class="style5" style="margin-top: 0; margin-bottom: 0">
+				<font face="Verdana"><strong><em><span class="style3">
+				<font size="2">Presenters @ Pontiac &amp; Department<br></font>
+				</span></em></strong><span style="font-weight: 400">
+				<span class="style3"><font size="2">Giselle Obregón [Team Process]<br>
+				Kari Wong [Ergonomics, Safety, Environment]<br>David Tseng [Engineering, 
+				Design]<br>Helena Xu [Marketing]<br>Christopher Liu [Finance]</font></span></span></font></p>
+				<p class="style5" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+				<p class="style5" style="margin-top: 0; margin-bottom: 0">
+				<font face="Verdana"><strong><em><span class="style3">
+				<font size="2">Team Members<br></font></span></em></strong>
+				<span style="font-weight: 400"><span class="style3">
+				<font size="2">Ann Chong<br>Chris Chang<br>Desiree Magat<br>Evan 
+				Kwan<br>Eric Huang</font></span></span></font></p>
+				<p class="style5" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+				<p class="style5" style="margin-top: 0; margin-bottom: 0">
+				<font face="Verdana"><strong><em><span class="style3">
+				<font size="2">Advisors </font></span></em></strong>
+				<span class="style3"><font size="2"><br></font>
+				<span style="font-weight: 400"><font size="2">Robert Franz<br>Ed 
+				Richter<br>Lorraine Griego<br>Mitch Kodama</font></span></span></font></p>
+				<p class="style5" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+				<p class="style5" style="margin-top: 0; margin-bottom: 0">
+				<font face="Verdana"><strong><font size="2">Team Location:
+				</font></strong><span style="font-weight: 400"><font size="2">Hacienda 
+				Heights, CA</font></span><strong><font size="2"><br>Competition 
+				Location: </font></strong>
+				<span class="style14" style="font-weight: 400">Pontiac, Michigan</span></font></p>
+				<p class="style5" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+				<p class="style6" style="margin-top: 0; margin-bottom: 0">
+				<font face="Verdana"><strong><font size="2">National Champions - 
+				2 years in a row <br></font></strong><font size="2">
+				<span style="font-weight: 400">1st Place: US $6,000.00<br>WOW Design: 
+				US $1,000.00</span><br></font><strong><font size="2">Total Award 
+				Money: US $7,000.00</font></strong></font></p>
+				<p class="style6" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+				<p align="left" class="style5" style="margin-top: 0; margin-bottom: 0">
+				<font face="Verdana"><span style="font-weight: 400">
+				<span class="style3"><font size="2">At the Los Altos Academy of 
+				Engineering, students have single-handedly built their own dream 
+				vehicle, the </font></span><font size="2"><strong>
+				<span class="style3">Di400</span></strong></font><span class="style3"><font size="2">. 
+				Under the title of Dynamic Innovations, high school students collaborated 
+				to create a car to submit to the annual Build Your Dream Vehicle 
+				competition. The Dynamic Innovations team, composed of Giselle Obregon, 
+				Chris Liu, Helena Xu, Kari Wong, David Tseng, Chris Chang, Ann Chong, 
+				Desiree Magat, Evan Kwan, and Eric Huang have banded together to 
+				form departments that cover design, marketing, environment, safety, 
+				ergonomics, finance, team process, and engineering. </font>
+				</span></span></font></p>
+				<p align="left" class="style6" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+				<p align="left" class="style6" style="margin-top: 0; margin-bottom: 0">
+				<span style="font-weight: 400"><font face="Verdana" size="2">For 
+				this competition, these young adults simulate every aspect involved 
+				in the debut of a concept vehicle new car. The case study for the 
+				2006 competition was to create an environmentally friendly vehicle 
+				that is fuel-efficient, has to average no lower than 50 mpg, no 
+				heavier than 3,000 pounds, and be at least 50% recyclable. Targeting 
+				the problem of mileage and fuel efficiency, the Dynamic Innovations 
+				team has decided to release a hybrid diesel vehicle that will achieve 
+				approximately 59.17 mpg. Additionally, the team planned to release 
+				a high performance car that will have an astounding 0-60 mph time 
+				of 5.8 seconds, yet maintaining a the comfort of luxury and security 
+				by incorporating innovative engineering concepts. With the report 
+				and video, the team entered a winning model of the vehicle and posters 
+				representing the aerodynamic features of the vehicle, color schemes, 
+				and ergonomics features. </font></span></p>
+				<p align="left" class="style6" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+				<p align="left" class="style5" style="margin-top: 0; margin-bottom: 0">
+				<font face="Verdana"><span style="font-weight: 400">
+				<span class="style3"><font size="2">Dynamic Innovations marketed 
+				the </font></span><font size="2"><strong><span class="style3">Di400</span></strong></font><span class="style3"><font size="2"> 
+				to baby boomers between the ages of 45-60 years old. With this, 
+				the team constructed advertisement strategies, engineering methods, 
+				detailed price breakdowns, and all other aspects of creating a vehicle 
+				as a real-life car company. The Di400 is set to debut in 2010 with 
+				the guiding slogan “dream it, desire it, you deserve it.” </font>
+				</span></span></font></p>
+				<p align="left" class="style6" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+				<p align="left" class="style5" style="margin-top: 0; margin-bottom: 0">
+				<font face="Verdana"><span style="font-weight: 400">
+				<span class="style3"><font size="2">The first requirement of the 
+				competition was to create a report consisting of each department’s 
+				goals and designs of the vehicle, and then the 20 teams that advanced 
+				from the 250 schools that participated in the initial report stage 
+				entered a 30 minute video. Of the 20 teams that advanced, 8 teams 
+				were chosen to present a 25 minute presentation to a panel of judges 
+				consisting of engineers from GM, Chrysler, Nissan, and a marketing 
+				executive from Candor Marketing. Presenters Giselle Obregon, Helena 
+				Xu, Kari Wong, Chris Liu, and David Tseng, all seniors at Los Altos 
+				High School, represented their school and engineering academy in 
+				Pontiac, Michigan on May 21-23. These five students worked at their 
+				High School’s Engineering Program and after school to create their 
+				final product, the </font></span><font size="2"><strong>
+				<span class="style3">Di400. </span></strong></font>
+				<span class="style3"><font size="2">Dynamic Innovations from Los 
+				Altos High School was the only team from California to advance to 
+				the Finals Competition, representing the West Coast region.
+				</font></span></span></font></p>
+				<p align="left" class="style6" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+				<p align="left" class="style5" style="margin-top: 0; margin-bottom: 0">
+				<span style="font-weight: 400"><span class="style3">
+				<font face="Verdana" size="2">Dynamic Innovations placed 1st at 
+				the National competition [$6,000] and received the WOW Award for 
+				Best Design [$1,000]. This is the second time Los Altos has placed 
+				1st nationally in their ten year involvement with the first time 
+				being last year. Dynamic Innovations is proud to announce that they 
+				are back to back National Champions. The “Build Your Dream Vehicle” 
+				Competition was first introduced in 1994 when Daimler-Chrysler wanted 
+				to give high-school students an opportunity to experience and benefit 
+				from the real-world lessons in the fields of engineering, business, 
+				and marketing. This competition has opened the eyes of students 
+				to possible career paths and exposed promising young designers and 
+				engineers to the automotive industry.</font></span></span></p>
+				<p align="left" class="style5" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+				<table id="table5" align="center" border="0" style="border-collapse: collapse" width="450">
+					<tr>
+						<td>
+						<p style="margin-top: 0; margin-bottom: 0">
+						<font face="Verdana"><span style="font-weight: 400">
+						<span class="style3"><font size="2">“The program’s integrated 
+						curriculum helps students polish work skills such as the 
+						application of science, technology and design; time management; 
+						creativity; teamwork; oral presentations; and development 
+						of marketing strategies and financial statements. The program 
+						also teaches students that even the best idea requires collaboration 
+						and an effective business plan in order to compete in today’s 
+						marketplace.”</font></span></span><font size="2"></font></font></p>
+						<p align="right" style="margin-top: 0; margin-bottom: 0">
+						<span class="style2"><font face="Verdana">
+						<span class="style3"><font size="2">- </font>
+						<span style="font-weight: 400"><font size="2">DaimlerChrysler 
+						Corporation</font></span></span></font></span></p>
+						</td>
+					</tr>
+				</table>
+				<p class="style5" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+				<p class="style5" style="margin-top: 0; margin-bottom: 0">
+				<font face="Verdana"><strong><span class="style3">
+				<font size="2">Competition Contact: </font></span></strong>
+				<span style="font-weight: 400"><font size="2">
+				<span class="style3">BYDV website - </span></font>
+				<span class="style3"><u>
+				<font size="2">www.bydv.org</font></u></span></span></font></p>
+				<p class="style5" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+				<p class="style15" style="margin-top: 0; margin-bottom: 0">BYDV: 
+				2006 Photos</p>
+				<p class="style5" style="margin-top: 0; margin-bottom: 0">
+				<a name="BYDV 2006 flash"></a></p>
+				<p class="style5" style="margin-top: 0; margin-bottom: 0">
+				<object id="damages" align="middle" class="style8" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" style="float: middle; width: 560px; height: 420px;">
+					<param name="allowScriptAccess" value="sameDomain" />
+					<param name="movie" value="BYDV%202006.swf" />
+					<param name="quality" value="High" />
+					<param name="swliveconnect" value="true">
+					<embed align="middle" allowscriptaccess="sameDomain" name="BYDV 2006" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="High" src="BYDV%202006.swf" style="width: 560px; height: 420px" swliveconnect="true" type="application/x-shockwave-flash" />
+					
+				</object>
+				</p>
+				<p class="style6" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+				<p class="style5" style="margin-top: 0; margin-bottom: 0">
+				<font face="Verdana"><strong><span class="style3">
+				<font size="2">Contact on Press Release:</font></span></strong><span class="style3"><font size="2">
+				</font><span style="font-weight: 400"><font size="2">Lydia Wei</font></span></span></font></p>
+				<p class="style6" style="margin-top: 0; margin-bottom: 0">
+				<span style="font-weight: 400"><font face="Verdana" size="2">
+				<a href="mailto:Laae.pr@gmail.com?subject=Contact on Press Release: BYDV 2006">
+				Laae.pr@gmail.com</a></font></span></p>
+				<p class="style6" style="margin-top: 0; margin-bottom: 0">
+				<span style="font-weight: 400"><font face="Verdana" size="2">(626) 
+				330-1096</font></span></p>
+				</span>
+			<!-- #EndEditable -->
+			<p>
+			<br>
+			</p>
+			</div>
+			</td>
+			<td align="center" width="5" valign="top" bgcolor="#FFFFFF">
+			<br>
+			</td>
+		</tr>
+		<tr>
+			<td align="center" height="15" style="width: 220px" colspan="3">
+			&nbsp;</td>
+			<td align="center" width="600" colspan="3" height="15">
+			&nbsp;</td>
+		</tr>
+		<tr>
+			<td valign="top" colspan="7" height="75" bordercolor="#808080" bgcolor="#808080">
+			<p class="style2" align="center">
+&nbsp;</p>
+			<div id="footer">
+			<p class="footer" align="center">
+© Los Altos Academy of Engineering. All rights reserved.</p>
+			<p class="footer" align="center">
+			All photographs, designs, and videos presented within this site are 
+			solely owned by the Los Altos Academy of Engineering.</p>
+			<p align="center" class="footer">
+			If you have questions or comments 
+			about this website, please contact the Information Technology team:
+			<a class="footer" href="mailto:infotech@lasv.org">INFOTECH@LASV.ORG</a>.<p class="footer" align="center">
+			&nbsp;</p>
+			<p align="center" class="footer">
+			LASV.org Web v9.7.1, by the 
+			<a class="footer" href="../../../laaefamily/students/2008/infotechnology/index.htm">LAAE Information Technology</a> 
+			team.<p align="center" class="footer">
+			Web hosting provided by:
+			<a href="http://www.vividnet.com/" class="style2">
+			<img alt src="../../../templates_v9/images/footer/logo-vividnet.JPG" width="30" height="21" class="style5"></a>
+			<a href="http://www.vividnet.com/" class="footer">VividNET</a><p align="center" class="footer">
+			&nbsp;
+			</div>
+			</td>
+			</tr>
+		</table>
+</div>
+
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-1154984-1";
+urchinTracker();
+</script>
+
+
+</body>
+
+<!-- #EndTemplate -->
+
+</html>

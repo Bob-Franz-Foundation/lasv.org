@@ -1,0 +1,913 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml">
+
+<!-- #BeginTemplate "../templates_v10/MainWithNoSide.dwt" -->
+
+<!-- © 2010 Los Altos Academy of Engineering. All rights reserved. All code below was created by the LAAE 
+	 Information Technology team, with the assistance from LAAE/LASV alumni (Jeffrey Hsiung and Justin K. Wong).
+	 Exceptions exist to certain parts, that of which are clearly designated. -->
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link href="../favicon.gif" rel="icon" type="image/gif" />
+<!-- #BeginEditable "doctitle" -->
+<title>LAAE Sponsors [LASV.ORG]</title>
+<!-- #EndEditable -->
+<!-- Begin print preview / print script -->
+<style media="print" type="text/css">
+
+body {
+	background-color: #FFFFFF;
+	background-image: none;
+	color: #000000;
+}
+.print_removed {
+	display: none;
+}
+</style>
+<!-- End print preview / print script -->
+<link href="../templates_v10/menu/chrometheme/chromestyle.css" rel="stylesheet" type="text/css" />
+<script src="../templates_v10/menu/chromejs/chrome.js" type="text/javascript">
+
+/***********************************************
+* Chrome CSS Drop Down Menu- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+<script src="../templates_v10/accordion/ddaccordion.js" type="text/javascript">
+/***********************************************
+* Accordion Content script- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* Visit http://www.dynamicDrive.com for hundreds of DHTML scripts
+* This notice must stay intact for legal use
+***********************************************/
+
+</script>
+<script type="text/javascript">
+
+ddaccordion.init({ //top level headers initialization
+	headerclass: "expandable", //Shared CSS class name of headers group that are expandable
+	contentclass: "categoryitems", //Shared CSS class name of contents group
+	collapseprev: false, //Collapse previous content (so only one open at any time)? true/false 
+	defaultexpanded: [0], //index of content(s) open by default [index1, index2, etc]. [] denotes no content
+	onemustopen: true, //Specify whether at least one header should be open always (so never all headers closed)
+	animatedefault: true, //Should contents open by default be animated into view?
+	persiststate: true, //persist state of opened contents within browser session?
+	toggleclass: ["", "openheader"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	togglehtml: ["prefix", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "normal", //speed of animation: "fast", "normal", or "slow"
+	oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+		//do nothing
+	},
+	onopenclose:function(header, index, state, isclicked){ //custom code to run whenever a header is opened or closed
+		//do nothing
+	}
+})
+
+ddaccordion.init({ //2nd level headers initialization
+	headerclass: "subexpandable", //Shared CSS class name of sub headers group that are expandable
+	contentclass: "subcategoryitems", //Shared CSS class name of sub contents group
+	collapseprev: true, //Collapse previous content (so only one open at any time)? true/false 
+	defaultexpanded: [], //index of content(s) open by default [index1, index2, etc]. [] denotes no content
+	animatedefault: false, //Should contents open by default be animated into view?
+	persiststate: true, //persist state of opened contents within browser session?
+	toggleclass: ["opensubheader", "closedsubheader"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	togglehtml: ["none", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "normal", //speed of animation: "fast", "normal", or "slow"
+	oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+		//do nothing
+	},
+	onopenclose:function(header, index, state, isclicked){ //custom code to run whenever a header is opened or closed
+		//do nothing
+	}
+})
+
+
+</script>
+<style type="text/css">
+
+/* Begin accordion styles */
+.arrowlistmenu {
+	width: 100%; /*width of accordion menu*/
+}
+.arrowlistmenu .menuheader {
+	/*CSS class for menu headers in general (expanding or not!)*/
+font: bold 12px Trebuchet MS;
+	color: white;
+	background: black url('../templates_v10/accordion/titlebar.jpg') repeat-x left 50%;
+	margin-bottom: 10px; /*bottom spacing between header and rest of content*/;
+	text-transform: uppercase;
+	padding: 4px 0 4px 10px;
+/*header text is indented 10px*/cursor: pointer;
+}
+.arrowlistmenu .openheader {
+	/*CSS class to apply to expandable header when it's expanded*/
+background-image: url('../templates_v10/accordion/titlebar-active.jpg');
+}
+.arrowlistmenu ul {
+	/*CSS for UL of each sub menu*/
+list-style-type: none;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 8px; /*bottom spacing between each UL and rest of content*/
+}
+.arrowlistmenu ul li {
+	padding-bottom: 2px; /*bottom spacing between menu items*/
+}
+.arrowlistmenu ul li .opensubheader {
+	/*Open state CSS for sub menu header*/
+background: orange !important;
+}
+.arrowlistmenu ul li .closedsubheader {
+	/*Closed state CSS for sub menu header*/
+background: yellow !important;
+}
+.arrowlistmenu ul li a {
+	color: #A70303;
+	background: url('../templates_v10/accordion/arrowbullet.png') no-repeat left 50%;
+/*custom bullet list image*/
+display: block;
+	padding-left: 19px; /*link text is indented 19px*/;
+	text-decoration: none;
+	font-weight: bold;
+	border-bottom: 1px solid #ADADAD;
+	font-size: 90%;
+	padding-right: 0;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.arrowlistmenu ul li a:visited {
+	color: #A70303;
+}
+.arrowlistmenu ul li a:hover {
+	/*hover state CSS*/
+background-color: #AAAAAA;
+}
+.arrowlistmenu ul li a.subexpandable:hover {
+	/*hover state CSS for sub menu header*/
+background: blue;
+}
+/* End accordion styles, begin page styles */
+.quoteFooter {
+	border-style: none none solid none;
+	border-width: 3px;
+	color: #333333;
+	background-color: #E0E0E0;
+	font-weight: normal;
+	border-collapse: collapse;
+	font-style: normal;
+}
+.border_collapse {
+	border-collapse: collapse;
+}
+.head {
+	background-color: #FFFFFF;
+	text-align: center;
+}
+.template_headerfooterbkg {
+	background-color: #CCCCCC;
+}
+.template_menushadow2 {
+	background-image: url('../templates_v10/images/maindesign/menushadowside.jpg');
+}
+.template_whitebkg {
+	background-color: #FFFFFF;
+}
+.template_footerformat {
+	text-align: left;
+	font-size: 8pt;
+}
+.site-bkgbottomtransition {
+	background-image: url('../templates_v10/images/maindesign/site-bkg_toptrans.jpg');
+	color: #FFFFFF;
+	background-repeat: repeat-x;
+}
+.align_center {
+	text-align: center;
+}
+.align_left {
+	text-align: left;
+}
+.align_right {
+	text-align: right;
+}
+.margins_zero {
+	padding: 0px;
+	margin: 0px;
+}
+.footer_vividnet {
+	border-width: 0px;
+	margin-top: -7px;
+	margin-bottom: -7px;
+	font-style: normal;
+}
+.set_border1px {
+	border: 1px solid #000000;
+	border-collapse: collapse;
+}
+.set_border3px {
+	border: 3px solid #000000;
+	border-collapse: collapse;
+}
+.set_border0px {
+	border-width: 0px;
+	border-collapse: collapse;
+}
+.template_sidetext {
+	font-size: 9pt;
+	color: #000000;
+}
+.template_searchtext {
+	font-family: "Trebuchet MS";
+	font-size: 14px;
+	color: #000000;
+}
+.template_headbkg {
+	background-image: url('../templates_v10/images/mainheader/background.jpg');
+}
+.quoteMain {
+	border-style: none;
+	color: #333333;
+	background-color: #E0E0E0;
+	font-weight: bold;
+	border-collapse: collapse;
+	font-style: italic;
+}
+.site-bkgtopright {
+	background-image: url('../templates_v10/images/maindesign/site-bkg_top_rightedge.jpg');
+	background-repeat: repeat-y;
+}
+.site-bkgtopleft {
+	background-image: url('../templates_v10/images/maindesign/site-bkg_top_leftedge.jpg');
+	background-repeat: repeat-y;
+}
+.site-bkgleft {
+	background-image: url('../templates_v10/images/maindesign/site-bkg_leftedge.jpg');
+	background-repeat: repeat-y;
+}
+.site-bkgright {
+	background-image: url('../templates_v10/images/maindesign/site-bkg_rightedge.jpg');
+	background-repeat: repeat-y;
+}
+.site-bkgfooter {
+	background-image: url('../templates_v10/images/footer/background-footer.jpg');
+	background-repeat: repeat-x;
+}
+.site-bkgend {
+	background-image: url('../templates_v10/images/footer/background-endfade.jpg');
+	background-repeat: repeat-x;
+}
+</style>
+<link href="../templates_v10/default.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body style="margin: 0; background-color: #D7D7D7;">
+
+<table cellpadding="0" cellspacing="0" class="border_collapse" style="width: 100%; height: 100%">
+	<tr>
+		<td colspan="5">
+		<table cellpadding="0" cellspacing="0" style="width: 100%">
+			<tr class="head">
+				<td class="print_removed" style="background-color: #eeeeee">&nbsp;</td>
+				<td class="print_removed site-bkgtopleft" style="width: 25px">&nbsp;</td>
+				<td class="head" style="width: 930px;">
+				<table cellpadding="0" cellspacing="0" style="width: 100%">
+					<tr class="template_headbkg">
+						<td class="print_removed" style="width: 10px"></td>
+						<td class="align_left" style="width: 565px" valign="top">
+						<img alt="Los Altos Academy of Engineering" src="../templates_v10/images/mainheader/laae_headtitle3.jpg" /></td>
+						<td class="print_removed">
+						<table cellpadding="0" cellspacing="0" style="width: 100%; height: 100%">
+							<tr>
+								<td>
+								<!-- #BeginEditable "Search" -->
+								<form id="cse-search-box" action="../search/results.htm" class="align_right template_searchbkg margins_zero">
+									<input name="cx" type="hidden" value="013252607434088326132:qb79_e4akxe" />
+									<input name="cof" type="hidden" value="FORID:9" />
+									<input name="ie" type="hidden" value="UTF-8" />
+									<input class="template_searchtext" name="q" size="35" type="text" />
+								</form>
+								<!-- #EndEditable -->
+								<script src="../templates_v10/search/brand.js" type="text/javascript"></script>
+								</td>
+							</tr>
+						</table>
+						</td>
+						<td class="print_removed" style="width: 10px"></td>
+					</tr>
+					<tr class="template_headbkg print_removed">
+						<td colspan="4">
+						<div id="chromemenu" class="chromestyle" style="width: 100%">
+							<ul class="mainmenu">
+								<li><a href="../index.htm">Home</a></li>
+								<li>
+								<a href="../about/index.htm" rel="dropmenu1">About 
+								Us</a></li>
+								<li>
+								<a href="../press/index.htm" rel="dropmenu2">Press</a></li>
+								<li>
+								<a href="../projects/index.htm" rel="dropmenu3">
+								Current Projects</a></li>
+								<li>
+								<a href="../programs/index.htm" rel="dropmenu4">
+								Programs We Sponsor</a></li>
+								<li>
+								<a href="../laaefamily/index.htm" rel="dropmenu5">
+								Our Family</a></li>
+								<li>
+								<a href="../galleries/index.htm" rel="dropmenu6">
+								Galleries</a></li>
+								<li><a href="../sponsors/index.htm">Sponsors</a></li>
+								<li><a href="../contact/index.htm">Contact Us</a></li>
+							</ul>
+						</div>
+						<!-- 1st drop down menu -->
+						<div id="dropmenu1" class="dropmenudiv">
+							<a href="../about/overview/index.htm">Overview</a>
+							<a href="../about/past/index.htm">Past Projects and 
+							Participation</a> </div>
+						<!-- 2nd drop down menu -->
+						<div id="dropmenu2" class="dropmenudiv">
+							<a href="../press/publications/index.htm">Publications</a>
+							<a href="../press/calendar/index.htm">Events Calendar</a>
+						</div>
+						<!-- 3rd drop down menu -->
+						<div id="dropmenu3" class="dropmenudiv">
+							<a href="../projects/infusion/index.htm">Infusion Hydrogen 
+							Fuel Cell Vehicle</a>
+							<a href="../projects/hice/index.htm">HICE Hydrogen Internal 
+							Combustion Vehicle</a>
+							<a href="../projects/botball/index.htm">Botball</a>
+							<a href="../projects/bridge/index.htm">Bridge Competition</a>
+							<a href="../projects/solarboat/index.htm">Solar Boat</a></div>
+						<!-- 4th drop down menu -->
+						<div id="dropmenu4" class="dropmenudiv">
+							<a href="../programs/isaaq/index.htm">ISAAQ</a>
+							<a href="../programs/msrobotics/index.htm">Middle School 
+							Robotics</a> </div>
+						<!-- 5th drop down menu -->
+						<div id="dropmenu5" class="dropmenudiv">
+							<a href="../laaefamily/acm/index.htm">Advisory Committee</a>
+							<!-- Under construction link
+							<a href="../laaefamily/booster/index.htm">Booster Club</a>
+							--><a href="../laaefamily/alumni/index.htm">Alumni</a>
+							<a href="../laaefamily/advisors/index.htm">Advisors</a>
+							<a href="../laaefamily/students/index.htm">Students</a>
+						</div>
+						<!-- 6th drop down menu -->
+						<div id="dropmenu6" class="dropmenudiv">
+							<a href="../laaefamily/acm/index.htm">Advisory Committee</a>
+							<a href="../laaefamily/alumni/gallery.htm">Alumni</a>
+							<a href="../projects/bydv/gallery.htm">Build Your Dream 
+							Vehicle</a>
+							<a href="../about/past/vehicles/photogallery/coolrunnings.htm">
+							Cool Runnings</a>
+							<a href="../about/past/hpa/gallery.htm">Human Powered 
+							Airplane</a>
+							<a href="../about/past/vehicles/dragster.htm">Dragster</a>
+							<a href="../about/past/vehicles/photogallery/lightspeed.htm">
+							Light Speed 1/2/3</a>
+							<a href="../about/past/vehicles/photogallery/solarshadow.htm">
+							Solar Shadow 1/2</a>
+							<a href="../programs/isaaq/zev.htm#images">ZEV Challenge</a>
+							<a href="../projects/infusion/gallery.htm">Infusion 
+							Hydrogen Fuel Cell Vehicle</a>
+							<a href="../about/past/jpl/2004/index.htm#images">JPL 
+							Invention Challenge</a>
+							<a href="../projects/botball/gallery.htm">Botball</a>
+							<a href="../projects/solarboat/index.htm">Solar Boat</a>
+							<a href="../about/past/vehicles/photogallery/speedracer.htm">
+							Speed Racer</a>
+							<a href="../projects/bridge/index.htm">Bridge Competition</a>
+							<a href="../projects/hice/gallery.htm">HICE Hydrogen 
+							Internal Combustion Vehicle</a>
+							<a href="../laaefamily/advisors/rfranz-retirement.htm">
+							Bob Franz&#39;s Retirement</a></div>
+						<script type="text/javascript">
+
+					cssdropdown.startchrome("chromemenu")
+
+				</script>
+						</td>
+					</tr>
+				</table>
+				</td>
+				<td class="print_removed site-bkgtopright" style="width: 25px">&nbsp;</td>
+				<td class="print_removed" style="background-color: #eeeeee">&nbsp;</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td class="site-bkgbottomtransition print_removed" valign="top">&nbsp;</td>
+		<td class="site-bkgleft print_removed" style="width: 25px; height: 100%;" valign="top">
+		<img alt="" height="350" src="../templates_v10/images/maindesign/site-bkg_toptrans_leftedge.jpg" width="25" /></td>
+		<td align="left" style="width: 930px; background-color: #000000" valign="top">
+		<table cellpadding="0" cellspacing="0" style="width: 100%">
+			<tr>
+				<td class="template_whitebkg" style="width: 100%" valign="top">
+				<table cellpadding="0" cellspacing="0" style="width: 100%">
+					<tr>
+						<td><center>
+						<!-- #BeginEditable "PageHeader" -->
+						<img alt="Sponsors" src="../templates_v10/images/contentheaders/sponsorslaae.jpg" /><!-- #EndEditable --></center></td>
+					</tr>
+				</table>
+				<table cellpadding="0" cellspacing="0" style="width: 100%; height: 100%">
+					<tr>
+						<td style="width: 20px; height: 20px"></td>
+						<td style="height: 20px"></td>
+						<td style="width: 20px; height: 20px"></td>
+					</tr>
+					<tr>
+						<td style="width: 20px"></td>
+						<td>
+						<!-- #BeginEditable "Main" -->
+						<center>
+						Please note that the sponsors shown below are provided 
+						for informational purposes only.<br />
+						Any logos and trademarks are the property of their 
+						respective owners.<br />
+						<br />
+						<table cellpadding="3" cellspacing="4" style="width: 800px">
+							<tr>
+								<td><center><a href="http://www.acpropulsion.com/">
+								<img alt="" class="set_border0px" height="81" src="../images/sponsors/AC_propulsion.gif" width="137" /></a>
+								</center></td>
+								<td colspan="4"><center><a href="http://www.aqmd.gov/">
+								<img alt="" class="set_border0px" height="117" src="../images/sponsors/AQMD.bmp" width="80" /></a>
+								</center></td>
+								<td colspan="2"><center><a href="http://www.boeing.com/">
+								<img alt="" class="set_border0px" height="38" src="../images/sponsors/boeing.bmp" width="80" /></a>
+								</center></td>
+								<td><center><a href="http://www.bp.com/">
+								<img alt="" class="set_border0px" height="100" src="../images/sponsors/bp.bmp" width="78" /></a>
+								</center></td>
+							</tr>
+							<tr>
+								<td><center>
+								<a href="http://www.californiasteelandtube.com/">
+								<img alt class="set_border0px" height="32" src="../images/sponsors/CA_steel_tube.bmp" width="153" /></a>
+								</center></td>
+								<td colspan="4"><center><a href="http://www.csupomona.edu/">
+								<img alt class="set_border0px" height="38" src="../images/sponsors/Cal_Poly_Pomona.bmp" width="129" /></a>
+								</center></td>
+								<td colspan="2"><center>
+								<a href="http://www.sce.com/">
+								<img alt="Southern California Edison" src="../images/sponsors/sce.gif" class="set_border0px" /></a></center></td>
+								<td><center>
+								<img alt class="set_border0px" height="29" src="../images/sponsors/Haddicks.bmp" width="71" />
+								</center></td>
+							</tr>
+							<tr>
+								<td><center><a href="http://walmartstores.com/">
+								<img alt="Walmart" class="set_border0px" src="../images/sponsors/walmart.jpg" /></a></center></td>
+								<td colspan="4"><center>
+								<a href="http://www.thehydrogencompany.com/">
+								<img alt="H-Tech Inc." class="set_border0px" height="119" src="../images/sponsors/H-TechDroplet.jpg" width="170" /></a></center></td>
+								<td colspan="2"><center><a href="http://www.toyota.com/">
+								<img alt class="set_border0px" height="58" src="../images/sponsors/TOYOTA.bmp" width="80" /></a></center></td>
+								<td><center><a href="http://www.lpvrop.org/">
+								<img alt class="set_border0px" height="117" src="../images/sponsors/LPVROP.bmp" width="115" /></a></center></td>
+							</tr>
+							<tr>
+								<td colspan="2"><center>
+								<img alt class="set_border0px" height="27" src="../images/sponsors/EGK_foundation.bmp" width="198" />
+								</center></td>
+								<td colspan="3"><center>
+								<a href="http://www.kta-ev.com/">
+								<img alt="KTA Services Inc." class="set_border0px" height="105" src="../images/sponsors/kta.jpg" width="75" /></a></center></td>
+								<td colspan="2"><center><a href="http://www.scion.com/">
+								<img alt="Scion" class="set_border0px" height="70" src="../images/sponsors/Scion.jpg" width="99" /></a></center></td>
+								<td><center><a href="http://www.hlpusd.k12.ca.us/">
+								<img alt class="set_border0px" height="94" src="../images/sponsors/HLPUSD.bmp" width="125" /></a>
+								</center></td>
+							</tr>
+							<tr>
+								<td colspan="5"><center>
+								<img alt id="Picture38" class="set_border0px" height="112" src="../images/sponsors/CityOfIndustry.gif" width="225" /><br />
+								Industry 
+								Manufacturing Council</center></td>
+								<td colspan="3"><center>
+								<a href="http://www.youthsciencecenter.org/">
+								<img alt id="Picture41" class="set_border0px" height="50" src="../images/sponsors/yschdg.png" width="264" /></a></center></td>
+														</tr>
+							<tr>
+								<td colspan="3"><center>
+								<a href="http://www.reichhold.com/">
+								<img alt="Reichhold" class="set_border0px" height="40" src="../images/sponsors/reichhold.JPG" width="192" /></a></center></td>
+								<td colspan="3"><center>
+								<img alt id="Picture24" class="set_border0px" height="60" src="../images/sponsors/IndustryHills.jpg" width="63" /><br />
+								Industry Hills Rotary Foundation</center></td>
+								<td colspan="2"><center>
+								<a href="http://www.reinhold-ind.com/">
+								<img alt="Reinhold" class="set_border0px" height="85" src="../images/sponsors/reinhold.jpg" width="133" /></a></center></td>
+							</tr>
+							<tr>
+								<td style="height: 100px"><center><a href="http://www.dmv.ca.gov/">
+								<img alt="Department of Motor Vehicles California" class="set_border0px" height="113" src="../images/sponsors/dmv_ca.jpg" width="120" /></a></center></td>
+								<td colspan="4" style="height: 100px"><center>
+								<a href="http://www.exide.com/">
+								<img alt="GNB Exide" class="set_border0px" height="111" src="../images/sponsors/gnb_exide.jpg" width="150" /></a></center></td>
+								<td colspan="2" style="height: 100px"><center>
+								<a href="http://www.dow.com/">
+								<img alt="Dow Chemical Company" class="set_border0px" height="150" src="../images/sponsors/dow.png" width="150" /></a></center></td>
+								<td style="height: 100px"><center>
+								<img alt id="Picture22" class="set_border0px" height="83" src="../images/sponsors/ElectricClub.jpg" width="80" /></center></td>
+							</tr>
+							<tr>
+								<td style="height: 100px"><center>
+								<img alt id="Picture27" class="set_border0px" height="28" src="../images/sponsors/RcBaker.jpg" width="130" /></center></td>
+								<td colspan="4" style="height: 100px"><center><a href="http://www.amctheatres.com/">
+								<img alt="AMC Theatres" class="set_border0px" height="59" src="../images/sponsors/AMC_theatres.png" width="160" /></a></center></td>
+								<td colspan="2" style="height: 100px"><center><a href="http://www.astroaluminum.com/">
+								<img alt id="Picture35" class="set_border0px" height="39" src="../images/sponsors/Astro.jpg" width="104" /></a></center></td>
+								<td style="height: 100px"><center><a href="http://www.dupont.com/">
+								<img alt="DuPont" class="set_border0px" height="100" src="../images/sponsors/dupont.jpg" width="100" /></a></center></td>
+							</tr>
+							<tr>
+								<td style="height: 100px"><center><a href="http://www.scottengineering.com/">
+								<img alt id="Picture29" class="set_border0px" height="35" src="../images/sponsors/Scott.jpg" width="148" /></a></center></td>
+								<td colspan="4" style="height: 100px"><center>
+								<a href="http://www.cdu.edu.au/">
+								<img alt="Charles Darwin University" class="set_border0px" height="37" src="../images/sponsors/cdu.gif" width="170" /></a></center></td>
+								<td colspan="2" style="height: 100px"><center><a href="http://www.avibank.com/">
+								<img alt="Avibank" class="set_border0px" height="50" src="../images/sponsors/avibank.gif" width="82" /></a></center></td>
+								<td style="height: 100px"><center>
+								<a href="http://www.generalsealants.com/">
+								<img alt="General Sealants" class="set_border0px" height="85" src="../images/sponsors/general_sealants.jpg" width="150" /></a></center></td>
+							</tr>
+							<tr>
+								<td style="height: 100px"><center><a href="http://www.polarisindustries.com/">
+								<img alt id="Picture26" class="set_border0px" src="../images/sponsors/Polaris.bmp" /></a></center></td>
+								<td colspan="4" style="height: 100px"><center>
+								<a href="http://www.airtechonline.com/">
+								<img alt="Airtech" class="set_border0px" height="34" src="../images/sponsors/airtech.gif" width="170" /></a></center></td>
+								<td colspan="2" style="height: 100px"><center>
+								<a href="http://www.sonypictures.com/">
+								<img alt id="Picture37" class="set_border0px" height="52" src="../images/sponsors/Tristar.jpg" width="76" /></a><br />
+								Columbia/Tristar</center></td>
+								<td style="height: 100px"><center><a href="http://swagelok.com">
+								<img alt="Swagelok" class="set_border0px" height="48" src="../images/sponsors/SwagelokLogo.jpg" width="161" /></a></center></td>
+							</tr>
+							<tr>
+								<td colspan="4"><center>
+								<a href="http://www.cerritos.edu/mt/composites/composites.html">
+								<img alt="Cerritos College" class="set_border0px" height="90" src="../images/sponsors/cerritos_college.jpg" width="250" /></a></center></td>
+								<td colspan="4"><center><a href="http://www.ksea.org/">
+								<img alt="Korean-American Scientists and Engineers Association" class="set_border0px" height="66" src="../images/sponsors/ksea.jpg" width="400" /></a></center></td>
+							</tr>
+							<tr>
+							<td colspan="3" style="width: 268435456px"><center>
+								<a href="http://www.uprinting.com/"><img class="set_border0px" alt="uprinting.com" 
+src="http://uprinting.s3.amazonaws.com/images/234x60-uprinting-no-border.png" /></a>
+</center></td></tr>
+							<tr>
+		
+								<td colspan="8"><center>
+								<a href="http://www.sherfab.com/">Sher-Fab Unlimited, 
+								Inc.</a></center></td>
+							</tr>
+							<tr>
+								<td colspan="8"><center>Aircraft Windshield Company</center></td>
+							</tr>
+							<tr>
+								<td colspan="8"><center>
+								<a href="http://www.bridgefoundation.org/">Bridge 
+								Foundation</a></center></td>
+							</tr>
+							<tr>
+								<td colspan="8"><center>
+								<a href="http://www.hac-hts-kiwanis.org/">Hacienda 
+								Heights Kiwanis</a></center></td>
+							</tr>
+							<tr>
+								<td colspan="8"><center>
+								<a href="http://www.hlpusd.k12.ca.us/webapps/portal/frameset.jsp?tab=community&amp;url=/bin/common/course.pl?course_id=_23086_1">
+								Hacienda-La Puente USD Board members</a></center></td>
+							</tr>
+							<tr>
+								<td colspan="8"><center><a href="http://www.kandwengineers.com/kandw-advantage/">
+								K &amp; W Engineering</a></center></td>
+							</tr>
+							<tr>
+								<td colspan="8"><center>Starnet Listing Broker, Inc.</center></td>
+							</tr>
+						</table>
+&nbsp;<br />
+						<hr /><br />
+						<strong>We would also like to give our sincere thanks to 
+						individual contributors.<br />
+						Without them, the LAAE program would not have been a 
+						success for all these years.<br />
+						<br />
+						</strong>
+						<table style="width: 500px">
+							<tr class="align_left">
+								<td style="width: 275px" >Brad Boyle</td>
+								<td style="width: 225px">General Sealants, Inc.</td>
+							</tr>
+							<tr class="align_left">
+								<td style="width: 325px" >Dave Rutherford</td>
+								<td style="width: 275px">City of Industry Lion’s Club</td>
+							</tr>
+							<tr class="align_left">
+								<td style="width: 325px" >David and Judith McCarroll</td>
+								<td style="width: 275px">&nbsp;</td>
+							</tr>
+							<tr class="align_left">
+								<td style="width: 325px" >Debbie Pearson </td>
+								<td style="width: 275px">California Steel and Tube </td>
+							</tr>
+							<tr class="align_left">
+								<td style="width: 325px" >Dickie Simmons</td>
+								<td style="width: 275px">Los Angeles Deputy</td>
+							</tr>
+							<tr class="align_left">
+								<td style="width: 325px" >Don and Betty White</td>
+								<td style="width: 275px">Former Principal of LAHS</td>
+							</tr>
+							<tr class="align_left">
+								<td style="width: 325px" >Don Knabe </td>
+								<td style="width: 275px">Administration </td>
+							</tr>
+							<tr class="align_left">
+								<td style="width: 325px" >Dr. and Mrs. Shelton</td>
+								<td style="width: 275px">Cal Poly Pomona</td>
+							</tr>
+							<tr class="align_left">
+								<td style="width: 325px" >Gary Edward</td>
+								<td style="width: 275px">Stud Welding Systems, Inc.</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >James Lu</td>
+								<td style="width: 275px">G.E. (alumni)</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >James R. Ganger</td>
+								<td style="width: 275px">Los Altos High School</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Jim Metchkoff</td>
+								<td style="width: 275px">&nbsp;</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Jim Watson</td>
+								<td style="width: 275px">Los Altos High School (retired) </td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >John Kramer</td>
+								<td style="width: 275px">Former Superintendent HLPUSD</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Juo-py Loh</td>
+								<td style="width: 275px">&nbsp;</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Judy Price</td>
+								<td style="width: 275px">Los Altos High School</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Karen Shumaker</td>
+								<td style="width: 275px">Los Altos High School</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Kathy Mota</td>
+								<td style="width: 275px">Toyota Motor Sales</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Ken Koch</td>
+								<td style="width: 275px">KTA Services, Inc.</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Laura Oyster</td>
+								<td style="width: 275px">Los Altos High School</td>
+							</tr>
+							<tr class="align_left">
+								<td style="width: 325px" >Laurie Marshall </td>
+								<td style="width: 275px">Haddick’s</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >La Brada Family</td>
+								<td style="width: 275px">&nbsp;</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Manuel C. Valencia</td>
+								<td style="width: 275px">&nbsp;</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Marcella Jackson</td>
+								<td style="width: 275px">La Puente Valley ROP</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Mary Ann King </td>
+								<td style="width: 275px">La Puente Valley ROP</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >May Liu</td>
+								<td style="width: 275px">&nbsp;</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Melvyn Sarthou</td>
+								<td style="width: 275px">La Puente Valley ROP (retired)</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Michael McCarroll</td>
+								<td style="width: 275px">HP Pavilion Sharks Hockey Team</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Mike Merchant</td>
+								<td style="width: 275px">Kaiser Permanente</td>
+							</tr>
+							<tr class="align_left">
+								<td style="width: 325px">Mitch Kodama</td>
+								<td style="width: 275px">Former Engineer</td>
+							</tr>
+							<tr class="align_left">
+								<td style="width: 325px">Mr. Shin</td>
+								<td style="width: 275px">&nbsp;</td>
+							</tr>
+							<tr class="align_left">
+								<td style="width: 325px">MTM Construction, Inc.</td>
+								<td style="width: 275px">&nbsp;</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Nikki Kodama</td>
+								<td style="width: 275px">Northrop Grumman</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Oscar Juarez</td>
+								<td style="width: 275px">AC Propulsion (alumni)</td>
+							</tr>
+							<tr class="align_left">
+								<td style="width: 325px">Ong Family</td>
+								<td style="width: 275px">&nbsp;</td>
+							</tr>
+							<tr class="align_left">
+								<td style="width: 325px">Patricia McIntosh</td>
+								<td style="width: 275px">&nbsp;</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Patricia Miller</td>
+								<td style="width: 275px">LA Puente Valley ROP</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Patty Higgins</td>
+								<td style="width: 275px">Los Altos High School</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Rae-Shae Chen</td>
+								<td style="width: 275px">Los Altos High School</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Ray Dean</td>
+								<td style="width: 275px">Los Altos High School (retired)</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Richard Kraft</td>
+								<td style="width: 275px">Los Altos High School (retired)</td>
+							</tr>
+							<tr class="align_left">
+								<td style="width: 325px" >Robin Chen </td>
+								<td style="width: 275px">Vivid Internet Production </td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Ron Biang</td>
+								<td style="width: 275px">LA Puente Ready Mix</td>
+							</tr>
+							<tr class="align_left">
+								<td style="width: 325px" >Ron Ketchem</td>
+								<td style="width: 275px">AQMD</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Sandra R. Johnson</td>
+								<td style="width: 275px">Board Member HLPUSD</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Sam Yu</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Shaun M. Yzquierdo</td>
+								<td style="width: 275px">Toyota</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Sports Dimension</td>
+								<td style="width: 275px">&nbsp;</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Steve Kang</td>
+								<td style="width: 275px">Boeing (alumni)</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Steven and Grace Lee</td>
+								<td style="width: 275px">&nbsp;</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Suk P and Eunju Chong</td>
+								<td style="width: 275px">&nbsp;</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >T. Huddle</td>
+								<td style="width: 275px">Los Altos High School (retired)</td>
+							</tr>
+							<tr class="align_left">
+								<td style="width: 325px" >Thomas Knipe </td>
+								<td style="width: 275px">Edison Electric Transportation </td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Tim Chow</td>
+								<td style="width: 275px">SyncGear Incorporated</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Tram Hoang</td>
+								<td style="width: 275px">Los Altos High School</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Pat McIntosh</td>
+								<td style="width: 275px">Bridge Foundation</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Victoria A. Lira</td>
+								<td style="width: 275px">&nbsp;</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Wai K. Wong</td>
+								<td style="width: 275px">&nbsp;</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Wei-Hwa and May-Lin Liu</td>
+								<td style="width: 275px">&nbsp;</td>
+							</tr>
+							<tr  class="align_left">
+								<td style="width: 325px" >Woon Shin</td>
+								<td style="width: 275px">&nbsp;</td>
+							</tr>
+						</table>
+						</center>
+						<!-- #EndEditable --></td>
+						<td style="width: 20px"></td>
+					</tr>
+					<tr>
+						<td style="width: 20px; height: 20px"></td>
+						<td style="height: 20px"></td>
+						<td style="width: 20px; height: 20px"></td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<table cellpadding="0" cellspacing="0" style="width: 100%">
+					<tr class="site-bkgfooter">
+						<td class="print_removed" style="width: 20px; height: 50px">&nbsp;</td>
+						<td style="height: 50px">
+						<span class="template_footerformat">© Los Altos Academy 
+						of Engineering. All rights reserved.<br />
+						This website is managed by the Information Technology team 
+						and hosted for LAAE by
+						<a href="http://www.vividnet.com/">
+						<img alt="" class="footer_vividnet print_removed" height="23" src="../templates_v10/images/footer/vividnet_new.JPG" width="30" />VividNET</a>.</span></td>
+						<td class="print_removed" style="height: 50px; width: 90px;">&nbsp;</td>
+						<td class="print_removed" style="height: 50px; width: 90px;">
+						<center>
+						<!--
+						<p>
+						<a href="http://jigsaw.w3.org/css-validator/check/referer">
+						<img alt="Valid CSS!" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" style="border: 0; width: 88px; height: 31px" />
+						</a></p>--></center></td>
+						<td class="print_removed" style="width: 20px; height: 50px">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="site-bkgend" style="height: 20px" colspan="5">
+						&nbsp;</td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+		<td class="site-bkgright print_removed" style="width: 25px; height: 100%;" valign="top">
+		<img alt="" height="350" src="../templates_v10/images/maindesign/site-bkg_toptrans_rightedge.jpg" width="25" /></td>
+		<td class="site-bkgbottomtransition print_removed" valign="top">&nbsp;</td>
+	</tr>
+</table>
+<!-- Begin: Google Analytics Tracking -->
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+	var pageTracker = _gat._getTracker("UA-1154984-1");
+	pageTracker._initData();
+	pageTracker._trackPageview();
+</script>
+<!-- End: Google Analytics Tracking -->
+
+</body>
+
+<!-- #EndTemplate -->
+
+</html>

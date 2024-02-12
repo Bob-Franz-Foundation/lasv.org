@@ -1,0 +1,560 @@
+<html>
+
+<!-- #BeginTemplate "Templates/MainTemplate.dwt" -->
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 12.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<!-- #BeginEditable "doctitle" -->
+<title>LASV.ORG &gt;&gt; Infusion HFC Vehicle</title>
+<style type="text/css">
+.style7 {
+	text-align: left;
+}
+.style8 {
+	text-align: center;
+}
+.style9 {
+	color: #FF0000;
+}
+</style>
+<!-- #EndEditable -->
+<style type="text/css">
+
+/*Credits: Dynamic Drive CSS Library */
+/*URL: http://www.dynamicdrive.com/style/ */
+
+.suckertreemenu ul{
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+
+/*Top level list items*/
+.suckertreemenu ul li{
+position: relative;
+display: inline;
+float: left;
+font-family: Verdana;
+font-size: 9pt;
+background-color: #979797; /*overall menu background color*/
+}
+
+/*Top level menu link items style*/
+.suckertreemenu ul li a{
+display: block;
+width: 0px; /*Width of top level menu link items*/
+height: 20px;
+padding: 2px 0px;
+border: 1px solid gray;
+border-left-width: 1pt;
+text-decoration: none;
+color: #111111;
+}
+	
+/*1st sub level menu*/
+.suckertreemenu ul li ul{
+left: 0;
+position: absolute;
+top: 1em; /* no need to change, as true value set by script */
+display: block;
+visibility: hidden;
+}
+
+/*Sub level menu list items (undo style from Top level List Items)*/
+.suckertreemenu ul li ul li{
+display: list-item;
+float: none;
+}
+
+/*All subsequent sub menu levels offset after 1st level sub menu */
+.suckertreemenu ul li ul li ul{ 
+left: 159px; /* no need to change, as true value set by script */
+top: 0;
+}
+
+/* Sub level menu links style */
+.suckertreemenu ul li ul li a{
+display: block;
+width: 175px; /*width of sub menu levels*/
+height: 20px;
+color: #121212;
+text-decoration: none;
+padding: 0px 3px;
+border: 1px solid gray;
+}
+
+.suckertreemenu ul li a:hover{
+background-color: #111111;
+color: #DADADA;
+}
+
+
+/*Background image for subsequent level menu list links */
+.suckertreemenu .subfoldericon{
+background: #979797 url('../../../Templates/images/mainmenu/arrow-right.gif') no-repeat right 50%;
+}
+
+/* Holly Hack for IE \*/
+* html .suckertreemenu ul li ul li { float: left;}
+/* End */
+
+/* End */
+
+
+}
+.style1 {
+	background-color: #FFFFFF;
+}
+
+
+.style2 {
+	font-size: 8pt;
+}
+
+
+.style5 {
+	font-size: 14pt;
+}
+.style6 {
+	font-family: Verdana;
+	font-size: x-small;
+}
+
+
+.style7 {
+	border-width: 0;
+	vertical-align: middle;
+}
+
+
+.style9 {
+	color: #FF9933;
+}
+
+
+</style>
+
+<script type="text/javascript">
+
+//SuckerTree Horizontal Menu (Sept 14th, 06)
+//By Dynamic Drive: http://www.dynamicdrive.com/style/
+
+var menuids=["treemenu1"] //Enter id(s) of SuckerTree UL menus, separated by commas
+
+function buildsubmenus_horizontal(){
+for (var i=0; i<menuids.length; i++){
+  var ultags=document.getElementById(menuids[i]).getElementsByTagName("ul")
+    for (var t=0; t<ultags.length; t++){
+		if (ultags[t].parentNode.parentNode.id==menuids[i]){ //if this is a first level submenu
+			ultags[t].style.top=ultags[t].parentNode.offsetHeight+"px" //dynamically position first level submenus to be height of main menu item
+			ultags[t].parentNode.getElementsByTagName("a")[0].className="mainfoldericon"
+		}
+		else{ //else if this is a sub level menu (ul)
+		  ultags[t].style.left=ultags[t-1].getElementsByTagName("a")[0].offsetWidth+"px" //position menu to the right of menu item that activated it
+    	ultags[t].parentNode.getElementsByTagName("a")[0].className="subfoldericon"
+		}
+    ultags[t].parentNode.onmouseover=function(){
+    this.getElementsByTagName("ul")[0].style.visibility="visible"
+    }
+    ultags[t].parentNode.onmouseout=function(){
+    this.getElementsByTagName("ul")[0].style.visibility="hidden"
+    }
+    }
+  }
+}
+
+if (window.addEventListener)
+window.addEventListener("load", buildsubmenus_horizontal, false)
+else if (window.attachEvent)
+window.attachEvent("onload", buildsubmenus_horizontal)
+
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="../../../main.css">
+
+</head>
+
+
+<body bgcolor="#333333" style="background-image: url('../../../Templates/images/laae-bkg.JPG'); background-attachment: fixed"></body>
+<div align="center">
+	<table border="0" cellpadding="0" style="border-collapse: collapse; width: 895px;" height="0">
+		</table>
+	<table border="0" cellpadding="0" width="895" style="border-collapse: collapse" id="table2">
+		<tr>
+			<th width="260" bgcolor="#808080" colspan="2" style="width: 937px; height: 15px;">
+			<!-- MSCellType="ContentHead" -->
+			<p style="margin-top: 0; margin-bottom: 0">&nbsp;</th>
+		</tr>
+		<tr>
+			<th height="100" width="250" bgcolor="#FFFFFF">
+			<!-- MSCellType="ContentHead" -->
+			<p align="center" style="margin-top: 0; margin-bottom: 0">
+			<img border="0" src="../../../Templates/images/mainheader/laae_logo.gif" width="248" height="85" align="middle"></th>
+			<th height="100" align="left" bgcolor="#FFFFFF" background="../../../Templates/images/mainheader/header_background.JPG" width="677">
+&nbsp;</th>
+		</tr>
+		</table>
+	<table border="0" cellpadding="0" width="895" style="border-collapse: collapse" height="0">
+		<tr>
+			<td align="center" height="20" bordercolorlight="#808080" bordercolordark="#808080" bgcolor="#808080" width="889">
+<table border="0" cellpadding="0" style="border-collapse: collapse; width: 885px;" id="table1">
+		<tr>
+			<td align="center" bordercolorlight="#808080" bordercolordark="#808080" bgcolor="#808080" width="881" style="height: 13px">
+			<p><b><em><span class="style9">PLEASE NOTE THAT THIS SITE IS NOT 
+				UPDATED. TO VIEW THE UPDATED INFUSION SITE, </span></em>
+				<font color="#FF0000">
+				<a href="../index.html">
+			<em><span class="style9">CLICK HERE</span></em></a></font><span class="style9">.</span></b></p>
+		
+		</td>
+		</tr>
+		</table>
+		</td>
+		</tr>
+		</table>
+	<table border="0" cellpadding="0" style="border-collapse: collapse; width: 895px;" height="0">
+		<tr>
+			<td align="center" width="234" colspan="3" style="height: 15px">
+			&nbsp;</td>
+			<td align="center" bgcolor="#808080" style="width: 20px;" rowspan="2">
+			&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="center" width="4" valign="top" bgcolor="#C0C0C0">
+			&nbsp;</td>
+			<td align="center" width="220" valign="top" bgcolor="#DADADA">
+			<!-- #BeginEditable "SideBar" -->
+			<p style="margin-top: 0; margin-bottom: 0">
+			<img border="0" src="Templates/images/newtitle.gif" width="221" height="37"></p>
+			<hr>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="index.html">
+			<img border="0" id="img7" src="Templates/images/button5.jpg" height="30" width="200" alt="Infusion Home" fp-style="fp-btn: Metal Rectangle 5; fp-font: Verdana; fp-font-size: 11; fp-proportional: 0" fp-title="Infusion Home" onmouseover="FP_swapImg(1,0,/*id*/'img7',/*url*/'Templates/images/button6.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img7',/*url*/'Templates/images/button5.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img7',/*url*/'Templates/images/button7.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img7',/*url*/'Templates/images/button6.jpg')"></a><br>
+&nbsp;</p>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="about.html">
+			<img border="0" id="img2" src="Templates/images/button34.jpg" height="30" width="200" alt="About" fp-style="fp-btn: Metal Rectangle 5; fp-font: Verdana; fp-font-size: 11; fp-proportional: 0" fp-title="About" onmouseover="FP_swapImg(1,0,/*id*/'img2',/*url*/'Templates/images/button35.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img2',/*url*/'Templates/images/button34.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img2',/*url*/'Templates/images/button36.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img2',/*url*/'Templates/images/button35.jpg')"></a><br>
+&nbsp;</p>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="teams.html">
+			<img border="0" id="img3" src="Templates/images/button39.jpg" height="30" width="200" alt="Teams" onmouseover="FP_swapImg(1,0,/*id*/'img3',/*url*/'Templates/images/button3A.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img3',/*url*/'Templates/images/button39.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img3',/*url*/'Templates/images/button3B.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img3',/*url*/'Templates/images/button3A.jpg')" fp-style="fp-btn: Metal Rectangle 5; fp-font: Verdana; fp-font-size: 11; fp-proportional: 0" fp-title="Teams"></a><br>
+&nbsp;</p>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="process.html">
+			<img border="0" id="img4" src="Templates/images/button3D.jpg" height="30" width="200" alt="Process" onmouseover="FP_swapImg(1,0,/*id*/'img4',/*url*/'Templates/images/button3E.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img4',/*url*/'Templates/images/button3D.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img4',/*url*/'Templates/images/button3F.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img4',/*url*/'Templates/images/button3E.jpg')" fp-style="fp-btn: Metal Rectangle 5; fp-font: Verdana; fp-font-size: 11; fp-proportional: 0" fp-title="Process"></a><br>
+&nbsp;</p>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="pictures.html">
+			<img border="0" id="img5" src="Templates/images/button40.jpg" height="30" width="200" alt="Pictures" onmouseover="FP_swapImg(1,0,/*id*/'img5',/*url*/'Templates/images/button41.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img5',/*url*/'Templates/images/button40.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img5',/*url*/'Templates/images/button42.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img5',/*url*/'Templates/images/button41.jpg')" fp-style="fp-btn: Metal Rectangle 5; fp-font-size: 11; fp-proportional: 0" fp-title="Pictures"></a><br>
+&nbsp;</p>
+			<p style="margin-top: 0; margin-bottom: 0">
+			<a href="sponsors.html">
+			<img border="0" id="img6" src="Templates/images/button43.jpg" height="30" width="200" alt="Sponsors" onmouseover="FP_swapImg(1,0,/*id*/'img6',/*url*/'Templates/images/button44.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img6',/*url*/'Templates/images/button43.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img6',/*url*/'Templates/images/button45.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img6',/*url*/'Templates/images/button44.jpg')" fp-style="fp-btn: Metal Rectangle 5; fp-font: Verdana; fp-font-size: 11; fp-proportional: 0" fp-title="Sponsors"></a><br>
+&nbsp;<!-- #EndEditable --></td>
+			<td align="center" width="4" valign="top" bgcolor="#C0C0C0">
+			<p style="margin-top: 0; margin-bottom: 0">&nbsp;</td>
+			<td align="center" width="10" valign="top" bgcolor="#FFFFFF">
+			<p style="margin-top: 0; margin-bottom: 0">
+			&nbsp;</td>
+			<td align="center" valign="top" bgcolor="#FFFFFF" style="width: 620px">
+			<!-- #BeginEditable "Main" -->
+              <div align="center">
+                <h1 style="margin-top: 0; margin-bottom: 0"><b>
+				Infusion Hydrogen Fuel-cell Vehicle HOME PAGE</b></h1>
+				<p style="margin-top: 0; margin-bottom: 0" class="style9">
+				<strong>***** Archived Subsite, NOT UPDATED *****</strong></p>
+              </div>
+			<div align="center">
+			<table border="0" width="100%" id="table5" style="height: 465px">
+				<tr>
+					<td style="height: 368px">
+              <div align="center">
+                <table height="173" border="0" align="right" id="table8" style="width: 302px">
+                  <tr>
+                    <td class="tableText" colspan="2"><div align="center" class="tableHead">
+						<b>Infusion Design </b> </div></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2"><img src="_images/_background/Homepic.gif" width="281" height="150"></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+					<p align="center"><b><a href="pictures.html">
+					<font color="#000000">Click Here For More Images</font></a></b></td>
+                  </tr>
+                  <tr>
+                    <td class="style8">
+					<a href="pictures.html">
+					<img border="1" src="Templates/images/DSC01740.JPG" width="139" height="115"></a></td>
+                    <td class="style8">
+					<a href="pictures.html">
+					<img border="1" src="Templates/images/DSC02959.JPG" width="150" height="112"></a></td>
+                  </tr>
+                  <tr>
+                    <td class="style8">
+					<a href="pictures.html">
+					<img border="1" src="Templates/images/mech14.JPG"></a></td>
+                    <td class="style8">
+					<a href="pictures.html">
+					<img border="1" src="Templates/images/1.JPG"></a></td>
+                  </tr>
+                </table>
+                <table border="0" align="left" id="table7" style="width: 290px" height="0">
+                  <tr>
+                    <td class="style8" valign="top" style="width: 290px"><b>
+					Newsflash</b></td>
+                  </tr>
+                  <tr>
+                    <td class="style7" valign="top" style="width: 290px">
+					<ul class="style7">
+                      <li class="tableText">
+						<p align="left"><b><span class="style9">This site is no 
+						longer updated, 
+						Please </span> <a href="../index.html" class="style9">click here</a><span class="style9"> for 
+						updated news and status of Infusion.</span></b></li>
+						<li class="tableText">
+						<p align="left">Infusion official release date 2/2/07.</li>
+						<li class="tableText">
+						<p align="left">Infusion scheduled to compete in shell 
+						eco-challenge in November.</li>
+						<li class="tableText">
+						<p align="left">Infusion runs for the first time on its <br>
+						hydride tanks.</li>
+						<li class="tableText">
+						<p align="left">British Petroleum donates $10,000.</li>
+						<li class="tableText">
+						<p align="left">Roll out date for Infusion: June, 2005</li>
+						<li class="tableText">
+						<p align="left">Chris Liu has contacted Mark Trudugeon 
+						from Luxfer Gas Cylinders and has gotten a suitable 
+						hydrogen rated tank, model L87G at 4500 psi, donated.</li>
+						<li class="tableText">
+						<p align="left">Composites are going to Cerritos College 
+						to make shell for fuel cell car. Special thanks to Terry 
+						Price of the CTC program who donated manpower, advice 
+						and the facilities for the mold of the fuel cell. Chris 
+						Barry of Composites provided materials for the mold.</li>
+						<li class="tableText">
+						<p align="left">Boeing donated $50,000 worth of carbon 
+						fiber by Bruce Lowe.</li>
+                    </ul></td>
+                  </tr>
+                </table>
+                <p align="left">&nbsp;</p>
+              </div>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+			<p><br>
+			&nbsp;</p>
+					</td>
+					</tr>
+				</table>
+				<table width="515" border="0" id="table4" cellpadding="2">
+					<tr class="text">
+						<td colspan="2" align="left">
+						<div align="center" class="heads">
+							<h1 style="margin-top: 0; margin-bottom: 0">&nbsp;<b><span style="font-size: 14pt">Updates</span></b></h1>
+							<p style="margin-top: 0; margin-bottom: 0">
+							&nbsp;</div>
+						</td>
+					</tr>
+					<tr>
+						<td width="256" align="left">
+						<p style="margin-top: 0; margin-bottom: 0">
+						<font face="Times New Roman"><b>
+						<span style="font-size: 11pt">The New look of the 
+						Infusion Subsite</span></b></font></td>
+						<td width="249" align="left">
+						<p style="margin-top: 0; margin-bottom: 0" align="right">
+						<em>
+						<font face="Times New Roman" style="font-size: 11pt">December 12, 2006</font></em></td>
+					</tr>
+					<tr>
+						<td colspan="2" align="left">
+						<p style="margin-top: 0; margin-bottom: 0">
+						<font face="Times New Roman" style="font-size: 11pt"><br>
+						</font><span style="font-size: 11pt">
+						<font face="Times New Roman">The new Infusion subsite 
+						has a new look! The new layout design corresponds with 
+						the new look and feel of LASV.ORG, and is designed to 
+						allow for better navigation and access. This page is 
+						still undergoing beta testing, and we apologize 
+						for any accessibility issues that may occur.<br>
+						<br>
+						Thank You,<br>
+						Shaymus<br>
+						Los Altos Academy of Engineering Assistant Webmaster<br>
+						2006-2007</font></span></td>
+					</tr>
+					<tr>
+						<td width="509" align="left" colspan="2">
+						<hr></td>
+					</tr>
+					<tr>
+						<td width="256" align="left">
+						<p style="margin-top: 0; margin-bottom: 0">
+						<strong>
+						<font face="Times New Roman" style="font-size: 11pt">
+						Future of Infusion Site</font></strong></td>
+						<td width="249" align="left">
+						<p style="margin-top: 0; margin-bottom: 0" align="right">
+						<em>
+						<font face="Times New Roman" style="font-size: 11pt">October 23, 
+						2006</font></em></td>
+					</tr>
+					<tr>
+						<td colspan="2" align="left">
+						<p style="margin-top: 0; margin-bottom: 0">
+						&nbsp;<p style="margin-top: 0; margin-bottom: 0">
+						<font face="Times New Roman" style="font-size: 11pt">This 
+						Infusion sub site will be undergoing a few changes over 
+						the new few weeks. As of right now, many of the sections 
+						that still have 2004 and 2005 class content will be 
+						removed or archived because the 2006-2007 updated 
+						content information is now on the LASV.ORG main site. 
+						The images will still be on this site, as well as the 
+						process, so don't worry. As of right now, some of the 
+						images are broken, and they will be fixed in due time. 
+						My primary concern is to work on getting the new 
+						LASV.ORG complete first, and then start adding more 
+						content to this site, perhaps remodel it a little bit.</font><p style="margin-top: 0; margin-bottom: 0">
+						&nbsp;<p style="margin-top: 0; margin-bottom: 0">
+						<font face="Times New Roman" style="font-size: 11pt">
+						Thanks for your patience,</font><p style="margin-top: 0; margin-bottom: 0">
+						<font face="Times New Roman" style="font-size: 11pt">
+						Justin</font><p style="margin-top: 0; margin-bottom: 0">
+						<font face="Times New Roman" style="font-size: 11pt">Los 
+						Altos Academy of Engineering Lead Webmaster</font><p style="margin-top: 0; margin-bottom: 0">
+						<font face="Times New Roman" style="font-size: 11pt">
+						2006-2007</font></td>
+					</tr>
+					<tr>
+						<td width="509" align="left" colspan="2">
+						<hr></td>
+					</tr>
+					<tr>
+						<td width="256" align="left">
+						<p style="margin-top: 0; margin-bottom: 0">
+						<font face="Times New Roman" style="font-size: 11pt"><strong>Infusion Runs!!!</strong></font></td>
+						<td width="249" align="left">
+						<p style="margin-top: 0; margin-bottom: 0" align="right">
+						<em>
+						<font face="Times New Roman" style="font-size: 11pt">September 9, 2006</font></em></td>
+					</tr>
+					<tr>
+						<td colspan="2" align="left">
+						<p style="margin-top: 0; margin-bottom: 0">
+						<font face="Times New Roman">
+						<span style="font-size: 11pt"><br>
+						Infusion, LAAE's first 
+						Hydrogen Fuel Cell vehicle, has started up!</span></font><p style="margin-top: 0; margin-bottom: 0">
+						<font face="Times New Roman" style="font-size: 11pt">Read 
+						about this significant milestone
+						<a href="../../../news/updates/2007/sep2006/09_infusionrun.htm"><u>here</u></a>.</font></td>
+					</tr>
+					<tr class="text">
+						<td width="509" align="left" colspan="2">
+						<hr></td>
+					</tr>
+					<tr class="text">
+						<td width="256" align="left">
+						<p style="margin-top: 0; margin-bottom: 0">
+						<font face="Times New Roman">
+						<strong><span style="font-size: 11pt">British Petroleum Visits LAAE
+						</span> </strong></font></td>
+						<td width="249" align="left">
+						<p style="margin-top: 0; margin-bottom: 0" align="right">
+						<font face="Times New Roman">
+						<em><span style="font-size: 11pt">February 2, 2005</span></em></font></td>
+					</tr>
+					<tr valign="top" class="text">
+						<td colspan="2" align="left">
+						<p style="margin-top: 0; margin-bottom: 0">
+						<font face="Times New Roman">
+						<span style="font-size: 11pt"><br>At 11:00 
+						AM, two representatives of British Petroleum dropped by 
+						to see how the Infusion project was coming along. 
+						Gratitude and thanks are given for their $10,000 
+						donation.</span></font></td>
+					</tr>
+					</table></div>
+			<!-- #EndEditable --></td>
+			<td align="center" valign="top" style="width: 5px" class="style1">
+			&nbsp;</td>
+		</tr>
+		<tr>
+			<td valign="top" colspan="7">
+			&nbsp;</td>
+		</tr>
+		<tr>
+			<td valign="top" colspan="7" height="75" bordercolor="#808080" bgcolor="#808080">
+			<p class="style2" align="center">
+&nbsp;</p>
+			<p class="style2" align="center">
+© Los Altos Academy of Engineering. All rights reserved.</p>
+			<p class="style2" align="center">
+			All photographs and design images presented within this site are 
+			solely owned by the Los Altos Academy of Engineering.</p>
+			<p align="center" class="style2">
+			If you have problems, questions, or comments 
+			about this website, please contact the Information Technology team:
+			<font><a class="style2" href="mailto:infotech@lasv.org">
+			INFOTECH@LASV.ORG</a></font>.<p class="style2" align="center">
+			&nbsp;</p>
+			<p align="center" class="style2">
+			LASV.org Website Design v9.0, by the 
+			<font>
+			<a href="../../../laaefamily/students/2007/infotechnology/index.htm" class="style2">
+			<font>LAAE Information Technology</font></a></font> 
+			team.<p align="center" class="footer">
+			<span class="style2">This website is hosted by:
+			</span>
+			<a href="http://www.vividnet.com/" class="style2">
+			<img src="../../../Templates/images/footer/logo-vividnet.JPG" width="30" height="21" class="style7"></a>
+			<a href="http://www.vividnet.com/" class="style2">VividNET</a><p align="center">
+			&nbsp;</td>
+		</tr>
+		</table>
+</div>
+
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-1154984-1";
+urchinTracker();
+</script>
+
+
+
+<!-- #EndTemplate -->
+
+
+
+</html>
